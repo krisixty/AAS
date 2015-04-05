@@ -1,0 +1,559 @@
+@media screen
+{
+body
+{
+ color: #444;	
+ background-image:url("images/backn_test5.png");
+ background-repeat:repeat-x;
+ background-position:left top;
+ margin-left:100px;
+ font-size:100%;
+ font-family:Arial,Helvetica,sans-serif;
+}
+
+p.printcimer
+{
+display: none;
+}
+
+p.printheader
+{
+display: none;
+}
+
+p.logo
+{
+ margin-top:30px;
+ color: #FFFFFF;
+ font-size:2em;
+}
+
+p.cim
+{
+ margin-top:-120px;
+ margin-left:250px;
+ color: #FFFFFF;
+ font-size:1.5em;
+}
+
+p.fent_small
+{
+ margin-top:-20px;
+ margin-left:250px;
+ color: #FFFFFF;
+ font-size:0.75em;
+}
+
+p.fent_login
+{
+ margin-top:-5px;
+ margin-left:500px;
+ color: #2D81FF;
+ font-size:0.80em;
+}
+
+
+
+p.menu
+{	
+ margin-top:-5px;
+ color: #444;
+ font-size:0.90em;
+}
+
+p.text
+{
+ width:650px;	
+ margin-top:80px;
+ border:1px solid #D5DCDC;
+ color: #444;
+ font-size:0.90em;
+}
+
+p.text2
+{
+ width:650px;	
+ margin-top:0px;
+ border:1px solid #D5DCDC;
+ color: #444;
+ font-size:0.90em;
+}
+
+p.text3
+{
+ width:650px;	
+ margin-top:0px;
+ border:1px solid #D5DCDC;
+ color: #444;
+ font-size:0.90em;
+}
+
+p.signature
+{
+display: none;
+}
+
+p.footer
+{
+ margin-top:300px;
+ color: #444;
+ font-size:0.80em;
+}
+
+p.teamtreehouse
+{
+ margin-top:200px;
+}
+
+.table_reg /*Jelszó reset és a create user táblázatok*/
+{
+ width:40%;
+ margin-top:120px;
+ border-collapse:collapse;
+ border:1px solid #D5DCDC;
+ position:absolute;
+ background-color: #E8E8E8;
+ top:470px;
+ font-size:0.90em;
+}
+
+.table_reg td
+{
+ text-align:left;
+ border:0px solid black;
+ height:26px;
+}
+
+.table_reg th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table_reg3 /*Jelentkezõk bejelentkezési táblázata */
+{
+ width:20%;
+ margin-top:80px;
+ border-collapse:collapse;
+ border:1px solid #D5DCDC;
+ position:absolute;
+ background-color: #E8E8E8;
+ top:580px;
+ font-size:0.90em;
+}
+
+.table_reg3 td
+{
+ text-align:left;
+ border:0px solid black;
+ height:26px;
+}
+
+.table_reg3 th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table_change /*A jelszóváltoztatás (+tanulmányi elõadók bejelentkezési) táblázata */
+{
+ width:300px;
+ padding:0px;
+ border-collapse:collapse;
+ border:1px solid #D5DCDC;
+ position:absolute;
+ background-color: #E8E8E8;
+ top:200px;
+ font-size:0.90em;
+}
+
+.table_change td
+{
+ text-align:left;
+ border:0px solid black;
+ height:26px;
+}
+
+.table_change th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table_appform /*Az angol- és a német jelentkezési lap táblázata */
+{
+ padding:1px;
+ border-collapse:collapse;
+ border:1px solid #D5DCDC;
+ background-color: #FFF5E1;
+ position:absolute;
+ font-size:0.80em;
+}
+
+.table1 /*Jelentkezés beküldésének ellenõrzõ táblázata bal oldal */
+{
+ padding:10px;
+ border-collapse:collapse;
+ position:absolute;
+ top:300px;
+ left:150px;
+ font-size:0.80em;
+}
+
+.table1 td
+{
+ text-align:right;
+ border:0px solid black;
+ height:26px;
+}
+
+.table1 th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table2 /*Jelentkezés beküldésének ellenõrzõ táblázata jobb oldal */
+{
+ /*width:20%;*/
+ padding:10px;
+ border-collapse:collapse;
+ position:absolute;
+ top:300px;
+ left:550px;
+ font-size:0.80em;
+}
+
+.table2 td
+{
+ text-align:left;
+ border:0px solid black;
+ height:26px;
+}
+
+.table2 th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table_photo
+{
+ display:none;
+}
+
+.table_declaration
+{
+ display:none;
+}
+
+.table_office
+{
+ display:none;
+}
+
+.table_database /*Adatbázis választó */
+{
+ padding:0px;
+ border-collapse:collapse;
+ position:absolute;
+ top:160px;
+ left:150px;
+ font-size:0.80em;
+}
+
+.table_database td
+{
+ text-align:left;
+ border:0px solid #A0A0A0;
+ height:10px;
+ vertical-align:middle;
+}
+
+.table_pagenum /*Jelentkezõs tábla oldalszáma */
+{
+ padding:0px;
+ border-collapse:collapse;
+ position:absolute;
+ top:180px;
+ left:150px;
+ font-size:0.80em;
+}
+
+.table_pagenum td
+{
+ text-align:left;
+ border:0px solid #A0A0A0;
+ height:10px;
+ vertical-align:middle;
+}
+
+.table_applicants /*Jelentkezõs tábla */
+{
+ padding:0px;
+ border-collapse:collapse;
+ position:absolute;
+ top:230px;
+ left:150px;
+ font-size:0.80em;
+}
+
+.table_applicants td
+{
+ text-align:left;
+ border:1px solid #A0A0A0;
+ height:10px;
+ vertical-align:middle;
+}
+
+.table_applicants th
+{
+ text-align:left;
+ border:1px solid black;
+}
+
+fieldset 
+{
+ margin-left:0px;
+ -webkit-border-radius: 8px;
+ -moz-border-radius: 8px;
+ border-radius: 8px;
+ font-size:0.90em;
+}
+
+legend {
+ margin-left:0px;
+ font-size:0.90em;
+}
+
+
+.input_app
+{
+ background-color: #EDF5FF;
+ width:300px;	
+ height:15px;
+}
+
+.input
+{
+ background-color: #BFDDFF;
+ width:150px;
+}
+
+input:focus
+{ 
+ background-color: #FFFFFF;
+}
+
+select.selectone
+{
+ background-color: #EDF5FF;	
+ width:300px;
+}
+
+select.selectwo
+{
+ background-color: #EDF5FF;	
+}
+
+select:focus
+{ 
+ background-color: #FFFFFF;
+}
+
+a:link, a:visited, a:active 
+{
+ text-decoration:none;
+ color: #4D93A4;
+ }    /* unvisited link */
+ 
+ a:hover {
+  font-weight: bold;
+ }
+ 
+ /*
+a:visited 
+{
+ text-decoration:none;
+ color: #4D93A4;
+} /* visited link */
+/*
+a:hover 
+{
+ text-decoration:none;
+ color: #4D93A4;
+ font-weight: bold;
+}   /* mouse over link */
+/*
+a:active 
+{
+ /*text-decoration:none;*//*
+ color: #4D93A4;
+ font-weight: bold;
+}  /* selected link */
+
+}
+
+@media print
+{
+body
+{
+ color: #444;	
+ margin-left:10px;
+ font-size:75%;
+ font-family:Arial,Helvetica,sans-serif;
+}
+
+p.cim
+{
+ display: none;
+}
+
+p.text
+{
+ width:650px;	
+ margin-top:0px;
+ color: #444;
+ font-size:1.25em;
+}
+
+p.text3
+{
+ display: none;
+}
+
+p.signature
+{
+ width:650px;	
+ margin-top:50px;
+ color: #444;
+ font-size:0.80em;
+}
+
+p.fent
+{
+ display: none;
+}
+
+p.logo
+{
+ display: none;
+}
+
+p.fent_login
+{
+ display: none;
+}
+
+p.fent_small
+{
+ display: none;
+}
+
+p.printcimer
+{
+ margin-top:30px;
+ color: #FFFFFF;
+ font-size:2em;
+}
+
+p.printheader
+{
+ margin-top:-125px;
+ margin-left:100px;
+ color: #FFFFFF;
+ text-align:center;
+ font-size:1.90em;
+}
+
+p.middle
+{
+ display: none;
+}
+
+p.upper_menu
+{
+ display: none;
+}
+
+p.menu
+{
+ display: none;
+}
+
+
+
+
+.table_photo
+{
+ /*width:20%;*/
+ padding:10px;
+ border-collapse:collapse;
+ position:absolute;
+ top:140px;
+ left:450px;
+ font-size:1em;
+}
+
+.table_photo td
+{
+ text-align:left;
+ border:1px solid black;
+ height:150px;
+}
+
+.table_photo th
+{
+ text-align:right;
+ border:0px solid black;
+}
+
+.table_declaration
+{
+ /*width:20%;*/
+ padding:5px;
+ border-collapse:collapse;
+ position:absolute;
+ top:315px;
+ left:300px;
+ font-size:0.80em;
+}
+
+.table_declaration td
+{
+ text-align:left;
+ border: 0px solid gray;
+ height:0px;
+}
+
+.table_declaration th
+{
+ text-align:right;
+ border:0px;
+}
+
+.table_office
+{
+ /*width:20%;*/
+ padding:5px;
+ border-collapse:collapse;
+ position:absolute;
+ top:850px;
+ left:10px;
+ font-size:0.80em;
+}
+
+.table_office td
+{
+ text-align:left;
+ border:1px solid gray;
+ height:10px;
+}
+
+.table_office th
+{
+ text-align:right;
+ border:1px solid gray;
+}
+
+}

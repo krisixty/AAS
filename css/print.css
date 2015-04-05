@@ -1,0 +1,190 @@
+@media print
+{
+	body
+	{
+	 color: #000;	
+	 /*margin-left:10px;*/
+	 font-size:65%;
+	 font-family:Arial,Helvetica,sans-serif;
+	}
+
+	.main-nav {
+	display: none;
+	}
+	
+	.main-logo {
+	display: none;
+	}
+
+	p.login_message {
+	display: none;
+	}
+
+	p.cim
+	{
+	 display: none;
+	}
+		
+	fieldset.text2 {
+	max-width: 300px;
+	margin-bottom: 0px;
+	}
+	
+	legend.text {
+	font-size: 2em;
+	text-align: center;
+	text-align: center;
+	}
+	
+	p.text
+	{
+	 width:650px;	
+	 margin-top:0px;
+	 font-size:1.25em;
+	}
+
+	p.text3
+	{
+	 display: none;
+	}
+
+	p.signature
+	{
+	 display: inline;
+	 width: 650px;
+	 margin: 0px;
+	 font-size: 0.90em;
+	 position:absolute;
+	 top:870px;
+	}
+
+	p.fent
+	{
+	 display: none;
+	}
+
+	p.logo
+	{
+	 display: none;
+	}
+
+	p.fent_login
+	{
+	 display: none;
+	}
+
+	p.fent_small
+	{
+	 display: none;
+	}
+
+	p.printcimer
+	{
+	 margin-top:30px;
+	 color: #FFFFFF;
+	 font-size:2em;
+	}
+
+	p.printheader
+	{
+	 margin-top:-125px;
+	 margin-left:100px;
+	 color: #FFFFFF;
+	 text-align:center;
+	 font-size:1.90em;
+	}
+
+	p.middle
+	{
+	 display: none;
+	}
+
+	p.upper_menu
+	{
+	 display: none;
+	}
+
+	p.menu
+	{
+	 display: none;
+	}
+
+	.table_photo
+	{
+	 /*width:20%;*/
+	 display: inline;
+	 padding:10px;
+	 border-collapse:collapse;
+	 position:absolute;
+	 top:100px;
+	 left:450px;
+	 font-size:1.25em;
+	}
+
+	.table_photo td
+	{
+	 text-align:left;
+	 border:1px solid black;
+	 height:150px;
+	}
+
+	.table_photo th
+	{
+	text-align:right;
+	border:0px solid black;
+	}
+
+	.table_declaration
+	{
+	 /*width:20%;*/
+	 display: inline;
+	 padding:5px;
+	 border-collapse:collapse;
+	 position:absolute;
+	 top:300px;
+	 left:320px;
+	 font-size:10px;
+	}
+
+	.table_declaration td
+	{
+	 text-align:left;
+	 border: 0px solid gray;
+	 height:0px;
+	}
+
+	.table_declaration th
+	{
+	 text-align:right;
+	 border:0px;
+	}
+
+	.table_office
+	{
+	 /*width:20%;*/
+	 display: inline;
+	 padding:5px;
+	 border-collapse:collapse;
+	 position:absolute;
+	 top:510px;
+	 left:320px;
+	 font-size:0.80em;
+	}
+
+	.table_office td
+	{
+	 text-align:left;
+	 border:1px solid gray;
+	 height:10px;
+	}
+
+	.table_office th
+	{
+	 text-align:right;
+	 border:1px solid gray;
+	}
+
+	.main-footer {
+	 display: none;
+	}
+}
