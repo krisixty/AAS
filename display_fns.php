@@ -190,6 +190,23 @@ function display_site_info_d() {
 			<p>		
 				<img class='pics-in-text' src='css/images/infoblokk_kedv_final_felso_cmyk_en_ESZA_low_res.jpg'>		
 			</p>
+			<p>
+			<strong>Tag der Offenen Tür</strong><br>
+			<br>
+			Über Pfingsten 2015 (23. Mai-25.Mai 2015) werden Informationsveranstaltungen in
+			Szeged, Budapest und Pécs organisiert. Diese alljährliche Einführung
+			beinhaltet: Unterbringung, Vorträge über Ungarn, das Studium an den
+			Universitäten und ermöglicht während der Uni-Besuche Kontakte zu Studenten
+			und Professoren.<br>
+			<br>
+			Am Samstag den 23.05.2015 findet die Veranstaltung in Szeged, am Sonntag den
+			24.05.2015 in Budapest (Semmelweis Universität, Szent István Universität) und
+			am Montag den 25.05.2015 in Pécs, statt.<br>
+			<br>
+			Programmablauf sowie Anmeldeformular dieser Veranstaltung sind auf dem folgenden
+			Link zu erreichen: <a href="http://ungarnstudium.hu/news.php?id=87" target="_blank">http://ungarnstudium.hu/news.php?id=87</a><br>
+			</p>
+
 		</div>
 
 		<div class="grid-6">
@@ -202,8 +219,7 @@ function display_site_info_d() {
 					5. Schritt: Besuchen Sie unsere Seite später, um den Status Ihrer Bewerbung verfolgen zu können.<br />
 					</p>
 		</div>
-	</div>
-*/?>	
+	</div>	
 <?php
 }
 /*-- END OF DISPLAY SITE INFO --*/
