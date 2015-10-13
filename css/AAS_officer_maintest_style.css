@@ -394,6 +394,13 @@ a:active
 
 }
 
+img.flat_pics_officers {
+	height: 100px;
+	width: 200px;
+}
+
+
+
 @media print
 {
 body
