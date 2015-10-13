@@ -151,7 +151,7 @@ if (($hs_day)&&($hs_month)) //csak akkor fűzi össze az érettségi dátumot, h
 /**********************************ADATBÁZIS MŰVELETEK*********************************/	
 	
 $update_data=$conn->query
-	("UPDATE applicants SET fname='$fname', gname='$gname', gender='$gender', dob='$birthdate', pob_country='$pob_country', pob_city='$pob_city', citizen='$citizen', mfname='$mfname', mgname='$mgname', firstlang='$firstlang', proof_type='$proof_type', proof_num='$proof_num', permadd='$permadd', add_country='$add_country', add_pc='$add_pc', add_city='$add_city', phone='$phone', hs_name='$hs_name', hs_year='$hs_year', hs_date='$hs_date', hs_certnum='$hs_certnum', hs_country='$hs_country', hs_city='$hs_city' WHERE jel_id='$jel_id'");
+	("UPDATE applicants SET fname='$fname', gname='$gname', gender='$gender', dob='$birthdate', pob_country='$pob_country', pob_city='$pob_city', citizen='$citizen', mfname='$mfname', mgname='$mgname', firstlang='$firstlang', proof_type='$proof_type', proof_num='$proof_num', permadd='$permadd', add_country='$add_country', add_pc='$add_pc', add_city='$add_city', phone='$phone', hs_name='$hs_name', hs_year='$hs_year', hs_date='$hs_date', hs_certnum='$hs_certnum', hs_country='$hs_country', hs_city='$hs_city', er_fname='$er_fname', er_gname='$er_gname', er_relation='$er_relation', er_phone='$er_phone', er_email='$er_email', er_permadd='$er_permadd', er_add_pc='$er_add_pc', er_add_city='$er_add_city', er_add_country='$er_add_country' WHERE jel_id='$jel_id'");
 	echo 'Jelentkező adatai frissítve.';
 	?><br /><?php
 

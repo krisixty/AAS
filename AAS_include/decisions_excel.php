@@ -1,47 +1,53 @@
 <?php
+//elavult, magyarul volt eredetileg, de már itt is angolul van
 	if($sor['decision']=='')	
 		{
-		$decision='Nincs megadva';
+		$decision='Not set yet.'; 
 		}
 		
 	if ($sor['decision']=='N') 
 		{
-		$decision='Még nincs döntés';
+		$decision='No decision yet.';  
 		}
 		
 	if ($sor['decision']=='F') 
 		{
-		$decision='Felvéve'; 
+		$decision='Accepted';  
 		}
 		
 	if ($sor['decision']=='X') 
 		{
-		$decision='Felvételi vizsga'; 
+		$decision='Entrance Examination Required';  
 		}
 		
 	if ($sor['decision']=='P') 
 		{
-		$decision='Előkészítőre felvéve'; 
+		$decision='Accepted to Foundation Year';  
 		}
 	
 	if ($sor['decision']=='R') 
 		{
-		$decision='Ismételt vizsga'; 
+		$decision='Retake entrance examination';  
 		}
 	
 	if ($sor['decision']=='I') 
 		{
-		$decision='Előkészítőre felvéve/ismételt vizsga'; 
+		$decision='Accepted to Foundation Year/Retake Entrance Examination';  
 		}
 	
 	if ($sor['decision']=='E') 
 		{
-		$decision='Elutasítva'; 
+		$decision='Rejected';  
 		}
 		
 	if ($sor['decision']=='V') 
 		{
-		$decision='Várólista'; 
+		$decision='Waiting list'; 
+		}
+		
+	if ($sor['decision']=='H') 
+		{
+		$decision='Postponement'; ?> <br /> <?php 
 		}
 	
 	//német specifikus

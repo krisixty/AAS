@@ -1,13 +1,14 @@
 <?php
 //a decisions adattábla decisions oszlopának adataiból íratja ki a döntéseket angol nyelven
+//Elavult, a decisions.php-ban is angolul vannak már a döntések.
 	if($sor['decision']=='')	
 		{
-		print 'No decision yet.';?> <br /> <?php 
+		print 'Not set yet';?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='N') 
 		{
-		print 'No decision yet.'; ?> <br /> <?php 
+		print 'No decision yet'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='F') 
@@ -17,7 +18,7 @@
 		
 	if ($sor['decision']=='X') 
 		{
-		print 'Entrance Examination'; ?> <br /> <?php 
+		print 'Entrance Examination Required'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='P') 
@@ -27,12 +28,12 @@
 	
 	if ($sor['decision']=='R') 
 		{
-		print 'Entrance Examination Repeat'; ?> <br /> <?php 
+		print 'Retake entrance examination'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='I') 
 		{
-		print 'Accepted to Foundation Year/Entrance Examination Repeat'; ?> <br /> <?php 
+		print 'Accepted to Foundation Year/Retake Entrance Examination'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='E') 
@@ -44,6 +45,11 @@
 		{
 		print 'Waiting list'; ?> <br /> <?php 
 		}
+		
+	if ($sor['decision']=='H') 
+		{
+		print 'Postponement'; ?> <br /> <?php 
+		}	
 /*	
 	//német specifikus
 	if ($sor['decision']=='W') 

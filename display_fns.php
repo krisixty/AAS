@@ -185,26 +185,18 @@ function display_site_info_d() {
 		<div class="grid-6">
 			<h3>Sehr geehrte(r) Besucher(In)!</h3>
 			<p>
-					Herzlich Willkommen auf der Internetseite,,Application an Admission System" für das deutschsprachige Humanmedizinprogramm der Universität Szeged!<br><br>
+					Herzlich Willkommen auf der Internetseite,,Application an Admission System" für das deutschsprachige Humanmedizinprogramm der Universität Szeged!<br>
+					<br>
+					<strong>Die Bewerbungsfrist für das deutsche Humanmedizinprogram ist abgelaufen.<br />
+					Sie können sich bis zum 04. September 2015 für unser deutsch- oder englischsprachiges Vorbereitungsjahr bewerben.</strong> 
 			</p>
 			<p>		
 				<img class='pics-in-text' src='css/images/infoblokk_kedv_final_felso_cmyk_en_ESZA_low_res.jpg'>		
 			</p>
 			<p>
-			<strong>Tag der Offenen Tür</strong><br>
 			<br>
-			Über Pfingsten 2015 (23. Mai-25.Mai 2015) werden Informationsveranstaltungen in
-			Szeged, Budapest und Pécs organisiert. Diese alljährliche Einführung
-			beinhaltet: Unterbringung, Vorträge über Ungarn, das Studium an den
-			Universitäten und ermöglicht während der Uni-Besuche Kontakte zu Studenten
-			und Professoren.<br>
 			<br>
-			Am Samstag den 23.05.2015 findet die Veranstaltung in Szeged, am Sonntag den
-			24.05.2015 in Budapest (Semmelweis Universität, Szent István Universität) und
-			am Montag den 25.05.2015 in Pécs, statt.<br>
 			<br>
-			Programmablauf sowie Anmeldeformular dieser Veranstaltung sind auf dem folgenden
-			Link zu erreichen: <a href="http://ungarnstudium.hu/news.php?id=87" target="_blank">http://ungarnstudium.hu/news.php?id=87</a><br>
 			</p>
 
 		</div>
@@ -279,6 +271,10 @@ function display_user_menu(){
 						<ul class="grid-10 main-nav">
 						  <li><a href="form.php" class="<?php echo $ab_sel; ?>">Application </a></li>
 						  <li><a href="status.php" class="<?php echo $cont_sel; ?>">App Status</a></li> 
+						  
+						  <? //FELTÉTELHEZ KÖTNI?>
+						  <li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Flats</a></li> 
+						  
 						  <li><a href="change_passwd_form.php" class="<?php echo $gal_sel; ?>">Password</a></li>
 						  <li><a href="http://www.szegedmed.hu/application_and_admission_steps" target="_blank" class="<?php echo $proj_sel; ?>">Guide</a></li>
 						  <li><a href="logout.php" class="<?php echo $proj_sel; ?>">Logout</a></li>
@@ -300,6 +296,10 @@ function display_user_menu_d() {
 						<ul class="grid-10 main-nav">
 							<li><a href="form.php">Bewerbung</a></li>
 							<li><a href="status.php">Status</a></li>
+							
+							 <? //FELTÉTELHEZ KÖTNI?>
+							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Wohnung</a></li>
+						  
 							<li><a href="change_passwd_form_d.php">Passwort</a></li>
 							<li><a href="http://szegedmed.hu/de/bewerbung" target="_blank">Verfahren</a></li>
 							<li><a href="logout.php">Logout</a></li> 
@@ -318,6 +318,7 @@ function display_officer_menu()
 <a href="applicants.php">Jelentkezők - angol</a> |
 <a href="applicants_d.php">Jelentkezők - német</a> |
 <a href="queries.php">Lekérdezések</a> |
+<a href="flat_admin.php">Albérletek (teszt)</a> |
 <a href="logout.php">Logout</a> 
 </p>
 <?php
@@ -575,9 +576,13 @@ function display_registration_form_for_officers()
 		</div>
 
 		<div class="grid-6">
-			<h3>Die Bewerbungsfrist ist der 31. Mai 2015.</h3>
+			<h3>Bewerbung 2015</h3>
 				<p>
 						Bei dem Ausfüllen der Online-Bewerbug müssen die angegebenen Daten der Wahrheit entsprechen, die aktuell und vollständig sind, andererseits behält sich die Universität das Recht vor die Bewerbung bei falsch angegebenen Daten zu löschen.<br />
+						<br />
+						<strong>Die Bewerbungsfrist für das deutsche Humanmedizinprogram ist abgelaufen.<br />
+						Sie können sich bis zum 04. September 2015 für unser deutsch- oder englischsprachiges Vorbereitungsjahr bewerben.</strong> 
+						<br />
 						<br />
 						<strong><a href="appform.php">Bewerbung für die englischsprachigen Programme</a></strong>						
 				</p>
@@ -652,5 +657,39 @@ function db_switcher_table() {
 <?php
 }
 ?>
+
+<?php
+	function docUploadForm() {
+		
+		global $type_of_doc;
+		global $jel_id;
+
+?>
+		<form class="fileUpload" action="upload_docs.php" method="post" enctype="multipart/form-data">
+					<!-- <input type="file" id="file" name="uploaded_files"> -->
+					<input type="hidden" id="jel_id" name="jel_id" value="<?php print $jel_id; ?>" />
+					<input type="hidden" id="type_of_doc" name="type_of_doc" value="<?php print $type_of_doc; ?>" />
+					<input type="file" id="file" name="uploaded_files[]" multiple="multiple" required = "required"/>
+					<input type="submit" id="submit" name="submit" value="Upload">
+
+		</form>
+<?php
+	}
+?>
+
+<?php
+function backTo() {
+
+	global $jel_id;
+	global $backTo;
+?>
+		<form action="<?php print $backTo; ?>" method="post">
+				<input name="jel_id" type="hidden" value="<?php print $jel_id; ?>" />
+				<input type="submit" name="Submit" id="Submit" value="OK" />
+		</form>
+<?php
+}
+?>
+	
 
 

@@ -1,48 +1,53 @@
 <?php
 	if($sor['decision']=='')	
 		{
-		print 'Nincs megadva';?> <br /> <?php 
+		print 'Not set yet';?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='N') 
 		{
-		print 'Még nincs döntés'; ?> <br /> <?php 
+		print 'No decision yet'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='F') 
 		{
-		print 'Felvéve'; ?> <br /> <?php 
+		print 'Accepted'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='X') 
 		{
-		print 'Felvételi vizsga'; ?> <br /> <?php 
+		print 'Entrance Examination Required'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='P') 
 		{
-		print 'Előkészítőre felvéve'; ?> <br /> <?php 
+		print 'Accepted to Foundation Year'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='R') 
 		{
-		print 'Ismételt vizsga'; ?> <br /> <?php 
+		print 'Retake entrance examination'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='I') 
 		{
-		print 'Előkészítőre felvéve/ismételt vizsga'; ?> <br /> <?php 
+		print 'Accepted to Foundation Year/Retake Entrance Examination'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='E') 
 		{
-		print 'Elutasítva'; ?> <br /> <?php 
+		print 'Rejected'; ?> <br /> <?php 
 		}
 		
 	if ($sor['decision']=='V') 
 		{
-		print 'Várólista'; ?> <br /> <?php 
+		print 'Waiting list'; ?> <br /> <?php 
 		}
+		
+	if ($sor['decision']=='H') 
+		{
+		print 'Postponement'; ?> <br /> <?php 
+		}	
 	
 	//német specifikus
 	if ($sor['decision']=='W') 

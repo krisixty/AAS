@@ -12,24 +12,11 @@ include 'db_switcher.php'; //Eldönti az $app_year alapján, hogy melyik adatbá
 
 $apps=$conn->query("SELECT * FROM applicants, jel_es_prog WHERE applicants.jel_id=jel_es_prog.jel_id AND (program='G1' OR program='V') ORDER BY fname");
 
-?>
-<!-- Adatbázis választó táblázat: -->
-<table class="table_database">
-<tr>
-<td>Jelenlegi adatbázis: <strong><?php echo $app_year ?></strong> | Váltás a következőre:</td>
-<td>
-<form action="applicants_all_d.php" method="post" id="form1">
-<select name="app_year">
-<option>2015</option>
-<option>2014</option>   
-<option>2013</option>   
-</select>
-<input type="submit" name="Submit" id="Submit" value="választ" />
-</form>
-</td>
-</tr>
-</table>
+//Adatbázis választó táblázat
+	$formAction = 'applicants_all_d.php';
+	dbSwitcherSelect();
 
+?>
 <table class="table_pagenum">
 <tr>
 <td>

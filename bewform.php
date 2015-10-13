@@ -35,7 +35,7 @@ display_application_info_d();
 
 Hiermit bewerbe ich mich für das Studium der<br><br>
 
-	<?php include 'list_of_app_progs_d.php'; //a választható német programok listája?> 
+	<?php include 'list_of_app_progs_d2.php'; //a választható német programok listája _d: összes, _d2: vorb és paralell english?> 
        
 
 	<label for="fname">Nachname:</label>
@@ -180,7 +180,7 @@ Hiermit bewerbe ich mich für das Studium der<br><br>
 		<option value="12">12</option>
 	</select>
 
-	<label for="hs_certnum">Nummer des Zeugnisses:</label>
+	<label for="hs_certnum">Nummer des Zeugnisses (Insofern das Zeugnis keine Nummer hat, geben Sie bitte ein „-„ an.)</label>
 	<input type="text" name="hs_certnum" id="hs_certnum" size="40" maxlength="20">
     
 	<label for="hs_country">Land:</label>

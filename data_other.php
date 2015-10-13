@@ -40,5 +40,6 @@ include 'jon.php';
 ?></option>
 <option value="I">Igen</option>
 <option value="N">Nem</option>
+<option value="P">Postponement</option>
 </select><br>
 </fieldset> 

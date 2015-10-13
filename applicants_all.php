@@ -26,23 +26,11 @@ program='P2' OR
 program='P3' OR
 program='F') ORDER BY fname");
 
+//Adatbázis választó táblázat
+	$formAction = 'applicants_all.php';
+	dbSwitcherSelect();
 ?>
-<!-- Adatbázis választó táblázat: -->
-<table class="table_database">
-<tr>
-<td>Jelenlegi adatbázis: <strong><?php echo $app_year ?></strong> | Váltás a következőre:</td>
-<td>
-<form action="applicants_all.php" method="post" id="form1">
-<select name="app_year">
-<option>2015</option>
-<option>2014</option>   
-<option>2013</option>   
-</select>
-<input type="submit" name="Submit" id="Submit" value="választ" />
-</form>
-</td>
-</tr>
-</table>
+
 
 <table class="table_pagenum">
 <tr>

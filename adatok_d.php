@@ -9,7 +9,7 @@ $programs= $conn->query("SELECT * FROM jel_es_prog WHERE jel_id='$jel_id'");
 div_open();
 ?>
 <fieldset class="text">
-	<legend class="text">Meine Bewerbung</legend>
+	<legend class="text">Bewerbung für das Studienjahr 2015/2016</legend>
 		<fieldset class="text2">
 			<legend class="text2">Bewerbung für das Programm/die Programme</legend>
 

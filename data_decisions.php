@@ -63,33 +63,39 @@ Program:
 <select class="selectone" name="prog" id="prog">
 <option value="">-- select a program --</option>
 <option value="M1">
-Medicine - Entrance examination for year 1</option>
+Medicine - Year 1</option>
+<!--
 <option value="M1e">
 Medicine - Exemption from the entrance examination for year 1</option>
+-->
 <!-- Nem kell nekik 2014-re
 <option value="A">
 Anatomy Summer Course + Transfer to year 2</option>
 -->
 <option value="M2">
-Medicine - Transfer to 2nd year</option>
+Medicine - Year 2</option>
 <option value="M3">
-Medicine - Transfer to 3rd year</option>
+Medicine - Year 3</option>
 <option value="D1">
-Dentistry - Entrance examination for year 1</option>
+Dentistry - Year 1</option>
+<!--
 <option value="D1e">
 Dentistry - Exemption from the entrance examination for year 1</option>
+-->
 <option value="D2">
-Dentistry - Transfer to 2nd year</option>
+Dentistry - Year 2</option>
 <option value="D3">
-Dentistry - Transfer to 3rd year</option>
+Dentistry - Year 3</option>
 <option value="P1">
-Pharmacy - Entrance examination for year 1</option>
+Pharmacy - Year 1</option>
+<!--
 <option value="P1e">
 Pharmacy - Exemption from the entrance examination for year 1</option>
+-->
 <option value="P2">
-Pharmacy - Transfer to 2nd year</option>
+Pharmacy - Year 2</option>
 <option value="P3">
-Pharmacy - Transfer to 3rd year</option>
+Pharmacy - Year 3</option>
 <option value="F">
 Foundation Year</option>
 </select>
@@ -100,12 +106,17 @@ Döntés:
 <option value="">-- select one --</option>
 		<option value="N">No decision yet</option><br />  
 		<option value="F">Accepted</option><br />  
-        <option value="X">Entrance Examination</option><br />
+        <option value="X">Entrance Examination Required</option><br />
+		<!--
         <option value="P">Accepted to Foundation Year</option><br />
         <option value="R">Entrance Examination Repeat</option><br />
-        <option value="I">Accepted to Foundation Year/Entrance Examination Repeat</option><br />
+		-->
+		<option value="R">Retake Entrance Examination</option><br />
+        <option value="I">Accepted to Foundation Year/Retake Entrance Examination</option><br />
+		<option value="L">Evaluation Examination Required</option><br />
 		<option value="E">Rejected</option><br />  
 		<option value="V">Waiting list</option><br /> 
+		<option value="H">Postponement</option><br />
     	</select><br />
 </select>
 Döntés alapja:

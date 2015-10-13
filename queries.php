@@ -8,22 +8,11 @@ display_officer_menu();
 $username=$_SESSION['valid_user'];
 
 include 'db_switcher.php'; //Eldönti az $app_year alapján, hogy melyik adatbázishoz kapcsolódjon 
+
+//Adatbázis választó táblázat
+	$formAction = 'queries.php';
+	dbSwitcherSelect();
 ?>
-<!-- Adatbázis választó táblázat: -->
-<table class="table_database">
-<tr>
-<td>Jelenlegi adatbázis: <strong><?php echo $app_year ?></strong> | Váltás a következőre:</td>
-<td>
-<form action="queries.php" method="post" id="form1">
-<select name="app_year">
-<option>2014</option>   
-<option>2013</option>   
-</select>
-<input type="submit" name="Submit" id="Submit" value="választ" />
-</form>
-</td>
-</tr>
-</table>
 
 <br  />
 <br  />

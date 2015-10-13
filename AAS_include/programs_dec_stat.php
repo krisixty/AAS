@@ -1,7 +1,7 @@
 <?php
 	if($prog=='M1')	
 		{
-		echo 'Medicine - Entrance examination for year 1'; ?><br /><?php
+		echo 'Medicine - Year 1'; ?><br /><?php
 		}
 	if($prog=='M1e')	
 		{
@@ -13,15 +13,15 @@
 		}	
 	if($prog=='M2')	
 		{
-		echo 'Medicine - Transfer to 2nd year'; ?><br /><?php
+		echo 'Medicine - Year 2'; ?><br /><?php
 		}
 	if($prog=='M3')	
 		{
-		echo 'Medicine - Transfer to 3rd year'; ?><br /><?php
+		echo 'Medicine - Year 3'; ?><br /><?php
 		}
 	if($prog=='D1')	
 		{
-		echo 'Dentistry - Entrance examination for year 1'; ?><br /><?php
+		echo 'Dentistry - Year 1'; ?><br /><?php
 		}
 	if($prog=='D1e')	
 		{
@@ -29,15 +29,15 @@
 		}
 	if($prog=='D2')	
 		{
-		echo 'Dentistry - Transfer to 2nd year'; ?><br /><?php
+		echo 'Dentistry - Year 2'; ?><br /><?php
 		}
 	if($prog=='D3')	
 		{
-		echo 'Dentistry - Transfer to 3rd year'; ?><br /><?php
+		echo 'Dentistry - Year 3'; ?><br /><?php
 		}
 	if($prog=='P1')	
 		{
-		echo 'Pharmacy - Entrance examination for year 1'; ?><br /><?php
+		echo 'Pharmacy - Year 1'; ?><br /><?php
 		}
 	if($prog=='P1e')	
 		{
@@ -45,15 +45,15 @@
 		}
 	if($prog=='P2')	
 		{
-		echo 'Pharmacy - Transfer to 2nd year'; ?><br /><?php
+		echo 'Pharmacy - Year 2'; ?><br /><?php
 		}
 	if($prog=='P3')	
 		{
-		echo 'Pharmacy - Transfer to 3rd year'; ?><br /><?php
+		echo 'Pharmacy - Year 3'; ?><br /><?php
 		}
 	if($prog=='F')	
 		{
-		echo 'Foundation Year (Preparatory Course)'; ?><br /><?php
+		echo 'Foundation Year'; ?><br /><?php
 		}
 	if($prog=='G1')	
 		{
