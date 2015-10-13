@@ -25,15 +25,20 @@
 		{
 		print 'Accepted to Foundation Year'; ?> <br /> <?php 
 		}
-	
+		
 	if ($sor['decision']=='R') 
 		{
-		print 'Retake entrance examination'; ?> <br /> <?php 
-		}
+		print 'Retake Entrance Examination'; ?> <br /> <?php 
+		}	
 	
 	if ($sor['decision']=='I') 
 		{
 		print 'Accepted to Foundation Year/Retake Entrance Examination'; ?> <br /> <?php 
+		}
+	
+	if ($sor['decision']=='L') 
+		{
+		print 'Evaluation Examination Required'; ?> <br /> <?php 
 		}
 	
 	if ($sor['decision']=='E') 

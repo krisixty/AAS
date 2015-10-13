@@ -24,16 +24,21 @@
 		{
 		$decision='Accepted to Foundation Year';  
 		}
-	
+		
 	if ($sor['decision']=='R') 
 		{
-		$decision='Retake entrance examination';  
-		}
+		$decision='Retake Entrance Examination';  
+		}	
 	
 	if ($sor['decision']=='I') 
 		{
 		$decision='Accepted to Foundation Year/Retake Entrance Examination';  
 		}
+		
+	if ($sor['decision']=='L') 
+		{
+		$decision='Evaluation Examination Required';  
+		}	
 	
 	if ($sor['decision']=='E') 
 		{
