@@ -5,27 +5,33 @@ do_html_header('');
 check_valid_user();
 
 $username=$_SESSION['valid_user'];
+
 $conn = db_connect();
 
-$jel_id= $conn->query("SELECT jel_id FROM applicants WHERE username='$username'");
-if ($jel_id->num_rows>0) //vizsgálja, hogy adott-e már be jelentkezést
-	{
-	$sor=mysqli_fetch_array($jel_id);
+	$jel_id= $conn->query("SELECT jel_id FROM applicants WHERE username='$username'");
+	if ($jel_id->num_rows>0) //vizsgálja, hogy adott-e már be jelentkezést
+		{
+		$sor=mysqli_fetch_array($jel_id);
 
-$jel_id=$sor['jel_id'];
-$appdocs= $conn->query("SELECT * FROM appdocs WHERE jel_id='$jel_id'");
-$ad_sor=mysqli_fetch_array($appdocs);	//APPDOCS sor
+	$jel_id=$sor['jel_id'];
+	
+	$appdocs= $conn->query("SELECT * FROM appdocs WHERE jel_id='$jel_id'");
+	$ad_sor=mysqli_fetch_array($appdocs);	//APPDOCS sor
 
-$engdocs=$conn->query("SELECT * FROM engdocs WHERE jel_id='$jel_id'");
-$ed_sor=mysqli_fetch_array($engdocs); //ENGDOCS sorr
+	$engdocs=$conn->query("SELECT * FROM engdocs WHERE jel_id='$jel_id'");
+	$ed_sor=mysqli_fetch_array($engdocs); //ENGDOCS sorr
 
-$regdocs=$conn->query("SELECT * FROM regdocs WHERE jel_id='$jel_id'");
-$rd_sor=mysqli_fetch_array($regdocs); //REGDOCS sor 
+	$regdocs=$conn->query("SELECT * FROM regdocs WHERE jel_id='$jel_id'");
+	$rd_sor=mysqli_fetch_array($regdocs); //REGDOCS sor 
 
+
+//Sets interface for displaying uploaded files
+$interface = 'applicantUI';	
+	
 div_open();
 ?>
-<fieldset class="text">
-	<legend class="text">Application Status</legend>
+	<fieldset class="text">
+		<legend class="text">Application Status</legend>
 
 
 			<p>
@@ -220,7 +226,7 @@ div_open();
 				<?php
 				}	
 			?>
-</fieldset>
+	</fieldset>
 <?php
 div_close();
 do_html_footer();

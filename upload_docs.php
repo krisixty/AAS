@@ -43,7 +43,9 @@ $type_of_doc = $_POST['type_of_doc'];
 $jel_id = $_POST['jel_id'];
 
     $error = "";
-    
+ 
+div_open();
+ 
     $file_num = count($_FILES['uploaded_files']['name']);
 
     for ($i = 0; $i < $file_num; $i++) {
@@ -125,7 +127,8 @@ $bewerbung= $conn->query("SELECT program FROM jel_es_prog WHERE jel_id='$jel_id'
 		{
 		$backTo='app_status.php';
 		}
-
+?><br><br><?
 backTo();
-
+div_close();
+do_html_footer();
 ?>

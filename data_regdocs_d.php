@@ -91,4 +91,31 @@ A beiratkozáshoz szükséges dokumentumok beadásra kerültek? <select name="rd
 <option>No</option>
 <option>Yes</option>
 </select><br>
+
+<p>Feltöltött fájlok:<br>
+<?
+	$type_of_doc = 'HB_test'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'HB_vacc'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'hiv_test'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'xray'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'imm_vacc'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'var_rub'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'birthcert'; 
+	include 'shwUDocs.php';
+
+?>
+<p/>
+
 </fieldset>

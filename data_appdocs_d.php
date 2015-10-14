@@ -100,4 +100,10 @@ Anmeldung für die englischsprachige Aufnahmeprüfung: <select name="eng_ent">
 include 'data_app_pack_date.php';
 include 'data_remarks_appdocs.php'; 
 ?>
+<p>Feltöltött fájlok:<br>
+<?
+$type_of_doc = 'med_cert'; 
+include 'shwUDocs.php';
+?>
+</p>
 </fieldset>

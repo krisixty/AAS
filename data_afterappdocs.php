@@ -3,7 +3,7 @@ $appdocs=$conn->query("SELECT * FROM appdocs WHERE jel_id='$jel_id'");
 $sor=mysqli_fetch_array($appdocs); //APPDOCS QUERY
 
 $regdocs=$conn->query("SELECT * FROM regdocs WHERE jel_id='$jel_id'");
-$rd_sor=mysqli_fetch_array($regdocs); //APPDOCS QUERY
+$rd_sor=mysqli_fetch_array($regdocs); //REGDOCS QUERY
 
 ?>
 <fieldset><legend>Felvétel után beadandó dokumentumok:</legend>
@@ -61,6 +61,32 @@ Anyaga teljes? <select name="comp"> <?php //appdocs ?>
 <option><?php print $sor['comp'] ?></option>
 <option>No</option>
 <option>Yes</option>
-</select><br><br>
+</select><br><br><br>
 
+
+<p>Feltöltött fájlok:<br>
+<?
+	$type_of_doc = 'HB_test'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'HB_vacc'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'hiv_test'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'xray'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'imm_vacc'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'var_rub'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'birthcert'; 
+	include 'shwUDocs.php';
+
+?>
+<p/>
 </fieldset>

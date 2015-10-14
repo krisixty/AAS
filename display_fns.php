@@ -683,9 +683,9 @@ function backTo() {
 	global $jel_id;
 	global $backTo;
 ?>
-		<form action="<?php print $backTo; ?>" method="post">
+		<form class="buttonForm" action="<?php print $backTo; ?>" method="post">
 				<input name="jel_id" type="hidden" value="<?php print $jel_id; ?>" />
-				<input type="submit" name="Submit" id="Submit" value="OK" />
+				<button class="okButton" type="submit">OK</button>
 		</form>
 <?php
 }

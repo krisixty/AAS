@@ -273,10 +273,15 @@ form.moreForm {
 	display: inline;
 }
 
-
 button.moreButton {
   padding: 10px 24px 10px 18px;
   width: 40%;
+  height: 5%;
+}
+
+button.okButton {
+  padding: 10px 24px 10px 18px;
+  width: 20%;
   height: 5%;
 }
 
