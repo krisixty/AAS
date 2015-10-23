@@ -610,6 +610,27 @@ function dbSwitcherSelect() {
 }
 ?>
 
+<?php
+	function docUploadFormOfficerUI() {
+		
+		global $type_of_doc;
+		global $jel_id;
+		global $app_year;
+
+?>
+		<form class="fileUpload" action="updocs_officer.php" method="post" enctype="multipart/form-data">
+					<!-- <input type="file" id="file" name="uploaded_files"> -->
+					<input type="hidden" id="jel_id" name="jel_id" value="<?php print $jel_id; ?>" />
+					<input type="hidden" id="type_of_doc" name="type_of_doc" value="<?php print $type_of_doc; ?>" />
+					<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+					<input type="file" id="file" name="uploaded_files[]" multiple="multiple" required = "required"/>
+					<input type="submit" id="submit" name="submit" value="Upload">
+
+		</form>
+<?php
+	}
+?>
+
 
 
 

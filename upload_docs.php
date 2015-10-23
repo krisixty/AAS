@@ -1,50 +1,34 @@
 <?php
-require_once('aas_includes.php');
-session_start();
-do_html_header('');
-check_valid_user();
-$username=$_SESSION['valid_user'];
 
 
+	function getErrorString($error) {
 
-//include 'mimereader.class.php';
-$conn = db_connect(); 
+			if ($error == 1) {
+				$string = "max_upload_size_exceeded";
+			}
+			if ($error == 2) {
+				$string = "max_upload_size_exceeded";
+			}
+			if ($error == 3) {
+				$string = "file_not_uploaded_full";
+			}
+			if ($error == 4) {
+				$string = "no_file_to_upload";
+			}
+			if ($error == 6) {
+				$string = "missing_temp_folder";
+			}
+			if ($error == 7) {
+				$string = "failed_to_write_to_disk";
+			}
+			if ($error == 8) {
+				$string = "upload_stopped_by_extensions";
+			}
 
-function getErrorString($error) {
-
-        if ($error == 1) {
-            $string = "max_upload_size_exceeded";
-        }
-        if ($error == 2) {
-            $string = "max_upload_size_exceeded";
-        }
-        if ($error == 3) {
-            $string = "file_not_uploaded_full";
-        }
-        if ($error == 4) {
-            $string = "no_file_to_upload";
-        }
-        if ($error == 6) {
-            $string = "missing_temp_folder";
-        }
-        if ($error == 7) {
-            $string = "failed_to_write_to_disk";
-        }
-        if ($error == 8) {
-            $string = "upload_stopped_by_extensions";
-        }
-
-        return $string;
-    }
-
-
-
-$type_of_doc = $_POST['type_of_doc'];
-$jel_id = $_POST['jel_id'];
-
-    $error = "";
- 
-div_open();
+			return $string;
+		}
+	
+	$error = "";
  
     $file_num = count($_FILES['uploaded_files']['name']);
 
@@ -89,7 +73,14 @@ div_open();
 			//add date and time, type_of_dos, extension to the filename
 			$dateAndTime = date("Y-m-d-H-i-s");
 			$ext='.pdf';
-			$file_name = $type_of_doc.'_ID'.$jel_id.'_'.$dateAndTime.$ext;
+			$ghostname = $type_of_doc.'_ID'.$jel_id.'_'.$dateAndTime.$ext;
+			
+			$dynamic_salt = mt_rand();
+			$static_salt = '123456789987654321';
+			
+			$hash = sha1($dynamic_salt . $ghostname . $static_salt);
+			
+			$file_name = $type_of_doc.'_'.$hash.$ext;
 			
 			
 			$path = $docsPath;
@@ -105,7 +96,7 @@ div_open();
 			echo $_FILES['uploaded_files']['name'][$i].'<br>';
 			echo $type_of_doc;
 			
-			$insert_docs=$conn->query("INSERT INTO updocs (jel_id, doc_filename, type_of_doc) VALUES ('$jel_id', '$file_name', '$type_of_doc')");	
+			$insert_docs=$conn->query("INSERT INTO updocs (jel_id, ghostname, doc_filename, type_of_doc) VALUES ('$jel_id', '$ghostname', '$file_name', '$type_of_doc')");	
 			
         }
 
@@ -116,19 +107,5 @@ div_open();
         }
     }
 
-//végül visszaadja a jel_id-t az applicant.php vagy applicant_d.php-nak, hogy az újra le tudja kérni a jelentkező adatait, de előtte vizsgálja, hogy van-e német programra jelentkezése
-$bewerbung= $conn->query("SELECT program FROM jel_es_prog WHERE jel_id='$jel_id' AND (program='G1' OR program='V')");
-	
-	if ($bewerbung->num_rows>0)
-		{
-		$backTo='app_status_d.php';
-		}
-	else
-		{
-		$backTo='app_status.php';
-		}
-?><br><br><?
-backTo();
-div_close();
-do_html_footer();
+
 ?>

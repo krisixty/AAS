@@ -5,7 +5,7 @@
 <tr><td>[ ] Abiturzeugnis</td> <td>[ ] Tabellarischer Lebenslauf</td> <td>[ ] Kopie des Personalausweises/Reisepasses</td> </tr>
 <tr><td>[ ] 200 EUR Bewerbungsgebühren</td> <td>[ ] Gesundheitsheitattest</td> <td>[ ] Dyslexie</td> </tr>
 <tr><td><u>Nach der Zulassung:</u></td> <td></td> <td></td> </tr>
-<tr><td>[ ] Hepatitis-B-Test</td> <td>[ ] Hepatitis-C-Test</td> <td></td></tr>
+<tr><td>[ ] Hepatitis-B-Test</td> <td>[ ] Hepatitis-C-Test</td> <td>[ ] Laborergebnisse</td></tr>
 <tr><td>[ ] HIV-Test </td><td>[ ] zu alt</td> <td>[ ] fehlt</td> </tr>
 <tr><td>[ ] Kopie des Impfpasses (Hepatitis-B)</td> <td>[ ] zu alt</td> <td>[ ] fehlt</td> </tr>
 <tr><td>[ ] Röntgenaufnahme des Brustraumes </td> <td>[ ] Geburtsurkunde</td> <td>[ ] Erklärung über Windpocken und Röteln</td></tr>

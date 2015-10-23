@@ -131,6 +131,12 @@ div_open();
 					$type_of_doc = 'fee_dec'; 
 					docUploadForm(); ?>
 					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+					
+				Laborergebnisse: <?php print $rd_sor['labreport'];?><br /> 
+					<?php 
+					$type_of_doc = 'labreport'; 
+					docUploadForm(); ?>
+					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
 				
 				
 				<br />
@@ -186,6 +192,23 @@ div_open();
 				?>
 					
 				</fieldset>	
+				
+				
+			<?php
+			//Ha talál levelet, akkor kiírja azt	
+			$updocs=$conn->query("SELECT * FROM updocs WHERE jel_id='$jel_id'");
+			if ($updocs->num_rows>0)
+				{
+					$type_of_doc = 'acceptance_letter'; 
+					?>
+					<p class="uploadedDocs">
+					<fieldset class="text2">
+						<legend class="text2">Letters</legend>
+							<? include 'shwUDocs.php';?></p>
+					</fieldset>	<?
+						}
+				?>
+				
 				
 				<?	
 				//Ha talál üzenetet, akkor kiírja azt	

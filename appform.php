@@ -27,15 +27,15 @@ Hereby, I apply to:<br><br>
 
 
 	
-		<?php include 'list_of_app_progs.php'; //a választható angol programok listája?> 
+		<?php //include 'list_of_app_progs.php'; //a választható angol programok listája?> 
 		<?php /*include 'list_of_app_progs_pharm_fy.php'; //a választható angol programok listája, ígycsak gyógyszerész és előkészítő*/?> 	   
 	   
 
 	<label for="fname">Family name:</label>
-	<input type="text" name="fname" id="fname" size="40" maxlength="100">
+	<input type="text" name="fname" id="fname" size="40" maxlength="50">
 
 	<label for="gname">First name:</label>
-	<input type="text" name="gname" id="gname" size="40" maxlength="100">
+	<input type="text" name="gname" id="gname" size="40" maxlength="50">
 
 	<label for="gender">Gender:</label>
 	<select name="gender" id="gender">
@@ -52,7 +52,7 @@ Hereby, I apply to:<br><br>
 	</select>
 
 	<label for="pob_city">City:</label>
-	<input type="text" name="pob_city" id="pob_city" size="40" maxlength="50">
+	<input type="text" name="pob_city" id="pob_city" size="40" maxlength="30">
 
 	<label for="day">Date of Birth:</label>
 	<select name="day" id="day">
@@ -97,19 +97,19 @@ Hereby, I apply to:<br><br>
 
 	Mother's maiden name:     
 	<label for="mfname">Family name:</label>
-	<input type="text" name="mfname" id="mfname" size="40" maxlength="100">
+	<input type="text" name="mfname" id="mfname" size="40" maxlength="50">
 	<label for="mgname">First name:</label>
-	<input type="text" name="mgname" id="mgname" size="40" maxlength="100">
+	<input type="text" name="mgname" id="mgname" size="40" maxlength="50">
 
 	Permanent Address:
 	<label for="permadd">Street No\Street Name\PO.Box.</label>
-	<input type="text" name="permadd" id="permadd" size="40" maxlength="100">
+	<input type="text" name="permadd" id="permadd" size="40" maxlength="50">
 
 	<label for="add_pc">Postal Code: (If you don't have postal code write '-')</label>
 	<input type="text" name="add_pc" id="add_pc" size="40" maxlength="20">
 
 	<label for="add_city">City:</label>
-	<input type="text" name="add_city" id="add_city" size="40" maxlength="50">
+	<input type="text" name="add_city" id="add_city" size="40" maxlength="30">
 		
 	<label for="add_country">Country:</label>
 	<select name="add_country" id="add_country">
@@ -173,7 +173,7 @@ Hereby, I apply to:<br><br>
 	</select>
 	 
 	<label for="hs_certnum">Certificate number:</label>
-	<input type="text" name="hs_certnum" id="hs_certnum" size="40" maxlength="20">
+	<input type="text" name="hs_certnum" id="hs_certnum" size="40" maxlength="30">
 		
 	<label for="hs_country">Country:</label>
 	<select name="hs_country" id="hs_country">
@@ -181,10 +181,10 @@ Hereby, I apply to:<br><br>
 	</select>
 		
 	<label for="hs_city">City:</label>
-	<input type="text" name="hs_city" id="hs_city" size="40" maxlength="50">
+	<input type="text" name="hs_city" id="hs_city" size="40" maxlength="30">
 
 	<label for="studs">Studies following high school graduation(if any):</label>
-	<input type="text" name="studs" id="studs" size="40" maxlength="250">
+	<input type="text" name="studs" id="studs" size="40" maxlength="50">
 
 	
 	<fieldset> 
@@ -192,29 +192,29 @@ Hereby, I apply to:<br><br>
 		<legend>In case of Emergency please notify:</legend>
 	   
 			<label for="er_fname">Family name:</label>
-			<input type="text" name="er_fname" id="er_fname" size="40" maxlength="100">
+			<input type="text" name="er_fname" id="er_fname" size="40" maxlength="50">
 			
 			<label for="er_gname">First name:</label>
-			<input type="text" name="er_gname" id="er_gname" size="40" maxlength="100">
+			<input type="text" name="er_gname" id="er_gname" size="40" maxlength="50">
 			
 			<label for="er_relation">Relationship:</label>
-			<input type="text" name="er_relation" id="er_relation" size="40" maxlength="100">
+			<input type="text" name="er_relation" id="er_relation" size="40" maxlength="50">
 			
 			<label for="er_phone">Phone number:</label>
 			<input type="text" name="er_phone" id="er_phone" size="40" maxlength="20">
 
 			<label for="er_email">Email address:</label>
-			<input type='email' id="er_email" name='er_email' maxlength="100">
+			<input type='email' id="er_email" name='er_email' maxlength="50">
 			
 			Permanent Address:
 			<label for="er_permadd">Street No\Street Name\PO.Box.</label>
-			<input type="text" name="er_permadd" id="er_permadd" size="40" maxlength="100">
+			<input type="text" name="er_permadd" id="er_permadd" size="40" maxlength="50">
 
 			<label for="er_add_pc">Postal Code: <br>(If the person doesn't have postal code write '-')</label>
 			<input type="text" name="er_add_pc" id="er_add_pc" size="40" maxlength="20">
 
 			<label for="er_add_city">City:</label>
-			<input type="text" name="er_add_city" id="er_add_city" size="40" maxlength="50">
+			<input type="text" name="er_add_city" id="er_add_city" size="40" maxlength="30">
 				
 			<label for="er_add_country">Country:</label>
 			<select name="er_add_country" id="er_add_country">

@@ -86,6 +86,14 @@ Einzahlungsbeleg über die eingezahlten Studiengebühren: <select name="fee_dec"
 </select><br>
 
 <!--REGDOCS-->
+Laborergebnisse: <select name="labreport">
+<option><?php print $rd_sor['labreport'] ?></option>
+<option>No</option>
+<option>Yes</option>
+</select><br>
+
+
+<!--REGDOCS-->
 A beiratkozáshoz szükséges dokumentumok beadásra kerültek? <select name="rd_subm">
 <option><?php print $rd_sor['rd_subm'] ?></option>
 <option>No</option>

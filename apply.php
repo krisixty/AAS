@@ -77,7 +77,7 @@ $insert_appdocs_No=$conn->query
 	
 //No-ra állítja a beiratkozási doksikat
 $insert_regdocs_No=$conn->query
-	("INSERT INTO regdocs (jel_id, proof, study_a, fee_dec, prep, vorb, eng_ent, rd_subm, var_rub, imm_vacc) VALUES ('$jel_id', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No')");
+	("INSERT INTO regdocs (jel_id, proof, study_a, fee_dec, prep, vorb, eng_ent, rd_subm, var_rub, imm_vacc, labreport) VALUES ('$jel_id', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No')");
 
 if(($medicine)||($dentistry)||($pharmacy)||($prep)) //No-ra állítja az angolos doksikat
 	{

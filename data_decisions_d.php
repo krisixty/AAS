@@ -90,8 +90,15 @@ Visszajelzési határidő:
 <input type='submit' name='submit' value='Új döntés rögzítése'>
 </p>
 
-
 </form>
+
+<p>Felvételi levelek:<br>
+<?
+	$type_of_doc = 'acceptance_letter'; 
+	docUploadFormOfficerUI(); ?>
+	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+<p/>
+
 </fieldset>
 <?php include 'data_remarks_dec.php';?>
 </fieldset>

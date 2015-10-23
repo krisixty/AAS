@@ -62,7 +62,8 @@ $app_fee = $_POST['app_fee'];
 $passport = $_POST['passport'];
 $toefl = $_POST['toefl'];
 $comp = $_POST['comp'];
-$birthcert= $_POST['birthcert'];
+$birthcert = $_POST['birthcert'];
+$labreport = $_POST['labreport'];
 
 //jelentkezési dokumentumok megjegyzésének változója
 $remarks_ad = trim(preg_replace('/\s+/', ' ', $_POST['remarks_ad'])); /*Kiveszi az entereket és a tabokat*/
@@ -509,14 +510,14 @@ $check_jel_id=$conn->query("SELECT * FROM regdocs WHERE jel_id='$jel_id'");
 if ($check_jel_id->num_rows==0) 
 	{
 		$insert_regdocs=$conn->query
-	("INSERT INTO regdocs (jel_id, proof, study_a, fee_dec, prep, vorb, eng_ent, rd_subm,  var_rub, imm_vacc) VALUES ('$jel_id', '$proof', '$study_a', '$fee_dec', '$prep', '$vorb', '$eng_ent', '$rd_subm', '$var_rub', '$imm_vacc')");
+	("INSERT INTO regdocs (jel_id, proof, study_a, fee_dec, prep, vorb, eng_ent, rd_subm,  var_rub, imm_vacc, labreport) VALUES ('$jel_id', '$proof', '$study_a', '$fee_dec', '$prep', '$vorb', '$eng_ent', '$rd_subm', '$var_rub', '$imm_vacc', '$labreport')");
 	echo 'Beiratkozási dokumentumok rögzítve.';
 	?><br /><?php
 	}
 else
 	{
 	$update_regdocs_id=$conn->query
-	("UPDATE regdocs SET proof='$proof', study_a='$study_a', fee_dec='$fee_dec', prep='$prep', vorb='$vorb', eng_ent='$eng_ent', rd_subm='$rd_subm', var_rub='$var_rub', imm_vacc='$imm_vacc' WHERE jel_id='$jel_id'");
+	("UPDATE regdocs SET proof='$proof', study_a='$study_a', fee_dec='$fee_dec', prep='$prep', vorb='$vorb', eng_ent='$eng_ent', rd_subm='$rd_subm', var_rub='$var_rub', imm_vacc='$imm_vacc', labreport='$labreport' WHERE jel_id='$jel_id'");
 	echo 'Beiratkozási dokumentumok frissítve.';
 	?><br /><?php	
 	}

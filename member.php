@@ -33,8 +33,8 @@ $applicant = $conn->query("SELECT jel_id FROM applicants WHERE username='$userna
 
 if ($applicant->num_rows==0) //vizsgálja, hogy adott-e már be jelentkezést
 	{
-	display_program_switcher(); //ez mutatja meg a jelentkezési infot jelentkezési időszakban
-	//display_application_over_info(); //ez mutatja meg, hogy a jelentkezési időszak véget ért
+	//display_program_switcher(); //ez mutatja meg a jelentkezési infot jelentkezési időszakban
+	display_application_over_info(); //ez mutatja meg, hogy a jelentkezési időszak véget ért
 	}
 else
 	{	

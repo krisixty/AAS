@@ -35,14 +35,14 @@ display_application_info_d();
 
 Hiermit bewerbe ich mich für das Studium der<br><br>
 
-	<?php include 'list_of_app_progs_d2.php'; //a választható német programok listája _d: összes, _d2: vorb és paralell english?> 
+	<?php //include 'list_of_app_progs_d2.php'; //a választható német programok listája _d: összes, _d2: vorb és paralell english?> 
        
 
 	<label for="fname">Nachname:</label>
-	<input type="text" name="fname" id="fname" size="40" maxlength="100">
+	<input type="text" name="fname" id="fname" size="40" maxlength="50">
 
 	<label for="gname">Vorname:</label>
-	<input type="text" name="gname" id="gname" size="40" maxlength="100">
+	<input type="text" name="gname" id="gname" size="40" maxlength="50">
 
 	<label for="gender">Geschlecht:</label>
 		<select name="gender" id="gender">
@@ -59,7 +59,7 @@ Hiermit bewerbe ich mich für das Studium der<br><br>
 	</select>
 
 	<label for="pob_city">Stadt:</label>
-	<input type="text" name="pob_city" id="pob_city" size="40" maxlength="50">
+	<input type="text" name="pob_city" id="pob_city" size="40" maxlength="30">
 
 	<label for="day">Geburtsdatum:</label>
 	<select name="day" id="day">
@@ -105,19 +105,19 @@ Hiermit bewerbe ich mich für das Studium der<br><br>
 
 	Mädchenname der Mutter: 
 	<label for="mfname">Nachname:</label>
-	<input type="text" name="mfname" id="mfname" size="40" maxlength="100">
+	<input type="text" name="mfname" id="mfname" size="40" maxlength="50">
 	<label for="mgname">Vorname:</label>
-	<input type="text" name="mgname" id="mgname" size="40" maxlength="100">
+	<input type="text" name="mgname" id="mgname" size="40" maxlength="50">
 
 	Wohnadresse
 	<label for="permadd">Str./Haus-Nr</label>
-	<input type="text" name="permadd" id="permadd" size="40" maxlength="100">
+	<input type="text" name="permadd" id="permadd" size="40" maxlength="50">
 
 	<label for="add_pc">Postleitzahl:</label>
 	<input type="text" name="add_pc" id="add_pc" size="40" maxlength="20">
 
 	<label for="add_city">Stadt:</label>
-	<input type="text" name="add_city" id="add_city" size="40" maxlength="50">
+	<input type="text" name="add_city" id="add_city" size="40" maxlength="30">
 
 	<label for="add_country">Land:</label>
 	<select name="add_country" id="add_country">
@@ -181,7 +181,7 @@ Hiermit bewerbe ich mich für das Studium der<br><br>
 	</select>
 
 	<label for="hs_certnum">Nummer des Zeugnisses (Insofern das Zeugnis keine Nummer hat, geben Sie bitte ein „-„ an.)</label>
-	<input type="text" name="hs_certnum" id="hs_certnum" size="40" maxlength="20">
+	<input type="text" name="hs_certnum" id="hs_certnum" size="40" maxlength="30">
     
 	<label for="hs_country">Land:</label>
 	<select name="hs_country" id="hs_country">
@@ -189,39 +189,39 @@ Hiermit bewerbe ich mich für das Studium der<br><br>
 	</select>
     
 	<label for="hs_city">Stadt:</label>    
-	<input type="text" name="hs_city" id="hs_city" size="40" maxlength="50">
+	<input type="text" name="hs_city" id="hs_city" size="40" maxlength="30">
 
 	<label for="studs">Studium nach der Abiturprüfung (Es ist keine Vorraussetzung der Bewerbung):</label>
-	<input type="text" name="studs" id="studs" size="40" maxlength="250">
+	<input type="text" name="studs" id="studs" size="40" maxlength="50">
 	
 	<fieldset> 
 	
 		<legend>Im Notfall zu verständigen:</legend>
 	   
 			<label for="er_fname">Nachname:</label>
-			<input type="text" name="er_fname" id="er_fname" size="40" maxlength="100">
+			<input type="text" name="er_fname" id="er_fname" size="40" maxlength="50">
 			
 			<label for="er_gname">Vorname:</label>
-			<input type="text" name="er_gname" id="er_gname" size="40" maxlength="100">
+			<input type="text" name="er_gname" id="er_gname" size="40" maxlength="50">
 			
 			<label for="er_relation">Angehörige:</label>
-			<input type="text" name="er_relation" id="er_relation" size="40" maxlength="100">
+			<input type="text" name="er_relation" id="er_relation" size="40" maxlength="50">
 			
 			<label for="er_phone">Tel:</label>
 			<input type="text" name="er_phone" id="er_phone" size="40" maxlength="20">
 
 			<label for="er_email">E-Mail:</label>
-			<input type='email' id="er_email" name='er_email' maxlength="100">
+			<input type='email' id="er_email" name='er_email' maxlength="50">
 			
 			Permanent Address:
 			<label for="er_permadd">Wohnadresse: Str./HausNr:.</label>
-			<input type="text" name="er_permadd" id="er_permadd" size="40" maxlength="100">
+			<input type="text" name="er_permadd" id="er_permadd" size="40" maxlength="50">
 
 			<label for="er_add_pc">Postleitzahl:</label>
 			<input type="text" name="er_add_pc" id="er_add_pc" size="40" maxlength="20">
 
 			<label for="er_add_city">Stadt:</label>
-			<input type="text" name="er_add_city" id="er_add_city" size="40" maxlength="50">
+			<input type="text" name="er_add_city" id="er_add_city" size="40" maxlength="30">
 				
 			<label for="er_add_country">Land:</label>
 			<select name="er_add_country" id="er_add_country">

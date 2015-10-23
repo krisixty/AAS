@@ -665,7 +665,7 @@ function db_switcher_table() {
 		global $jel_id;
 
 ?>
-		<form class="fileUpload" action="upload_docs.php" method="post" enctype="multipart/form-data">
+		<form class="fileUpload" action="applicants_docs.php" method="post" enctype="multipart/form-data">
 					<!-- <input type="file" id="file" name="uploaded_files"> -->
 					<input type="hidden" id="jel_id" name="jel_id" value="<?php print $jel_id; ?>" />
 					<input type="hidden" id="type_of_doc" name="type_of_doc" value="<?php print $type_of_doc; ?>" />

@@ -111,7 +111,7 @@ Döntés:
         <option value="P">Accepted to Foundation Year</option><br />
         <option value="R">Entrance Examination Repeat</option><br />
 		-->
-		<option value="R">Retake Entrance Examination</option><br />
+		<option value="T">Retake entrance examination</option><br />
         <option value="I">Accepted to Foundation Year/Retake Entrance Examination</option><br />
 		<option value="L">Evaluation Examination Required</option><br />
 		<option value="E">Rejected</option><br />  
@@ -192,8 +192,15 @@ Dátum:
 <input type='submit' name='submit' value='Új döntés rögzítése'>
 </p>
 
-
 </form>
+
+<p>Felvételi levelek:<br>
+<?
+	$type_of_doc = 'acceptance_letter'; 
+	docUploadFormOfficerUI(); ?>
+	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+<p/>
+
 </fieldset>
 <?php include 'data_remarks_dec.php';?>
 </fieldset>
