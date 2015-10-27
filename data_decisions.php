@@ -196,9 +196,11 @@ Dátum:
 
 <p>Felvételi levelek:<br>
 <?
-	$type_of_doc = 'acceptance_letter'; 
+	$type_of_doc = 'acceptance_letter';
+	$notification_type = 'decision';
 	docUploadFormOfficerUI(); ?>
-	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p><?
+	sendMailForm($notification_type);?>
 <p/>
 
 </fieldset>

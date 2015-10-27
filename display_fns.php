@@ -65,6 +65,7 @@ function do_html_heading($heading)
 				<?php
 				 if (isset($_SESSION['valid_user']))
 					{
+					isPaidandEngOrGer();
 					if ($pageLanguage == 'german') 
 						{
 						display_user_menu_d();
@@ -265,6 +266,8 @@ function display_top_and_index() {
 <?php
 /*------------------------------------------------------------------------------------- DISPLAY NEW USER MENU ---------------------------------------------------------------------------*/
 function display_user_menu(){
+	
+	global $payment;
 ?>
 				<div class="grid-container">
 					<h1 class="grid-2 main-logo"><a href="index.php">AAS</a></h1>
@@ -272,8 +275,14 @@ function display_user_menu(){
 						  <li><a href="form.php" class="<?php echo $ab_sel; ?>">Application </a></li>
 						  <li><a href="status.php" class="<?php echo $cont_sel; ?>">App Status</a></li> 
 						  
-						  <? //FELTÉTELHEZ KÖTNI?>
-						  <li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Flats</a></li> 
+						<? //FELTÉTELHEZ KÖTNI fizetett, angol v német jelentkezése van?
+						isPaidandEngOrGer();
+						if ($payment == 'Y') {
+						?>
+							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Appartments to Let</a></li> 
+						<?
+						}
+						?>
 						  
 						  <li><a href="change_passwd_form.php" class="<?php echo $gal_sel; ?>">Password</a></li>
 						  <li><a href="http://www.szegedmed.hu/application_and_admission_steps" target="_blank" class="<?php echo $proj_sel; ?>">Guide</a></li>
@@ -290,6 +299,8 @@ function display_user_menu(){
 
 <?php
 function display_user_menu_d() {
+
+	global $payment;
 ?>
 				<div class="grid-container">
 					<h1 class="grid-2 main-logo"><a href="index.php">AAS</a></h1>
@@ -297,9 +308,15 @@ function display_user_menu_d() {
 							<li><a href="form.php">Bewerbung</a></li>
 							<li><a href="status.php">Status</a></li>
 							
-							 <? //FELTÉTELHEZ KÖTNI?>
-							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Wohnung</a></li>
-						  
+						<? //FELTÉTELHEZ KÖTNI fizetett, angol v német jelentkezése van?
+						isPaidandEngOrGer();
+						if ($payment == 'Y') {
+						?>
+							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Mietwohnungen</a></li>
+						<?
+						}
+						?>
+
 							<li><a href="change_passwd_form_d.php">Passwort</a></li>
 							<li><a href="http://szegedmed.hu/de/bewerbung" target="_blank">Verfahren</a></li>
 							<li><a href="logout.php">Logout</a></li> 

@@ -55,7 +55,7 @@ else
 <input name="fname" type="hidden" value="<?php print $fname ?>" />
 <input name="gname" type="hidden" value="<?php print $gname ?>" />
 <input name="app_year" type="hidden" value="<?php print $app_year?>" />
-<input type='submit' name='submit' value='Jelentkezések karbantartása (teszt!!)'>
+<input type='submit' name='submit' value='Jelentkezések karbantartása'>
 </form>
 </td>
 </tr>

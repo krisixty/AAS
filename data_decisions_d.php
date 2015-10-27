@@ -96,7 +96,8 @@ Visszajelzési határidő:
 <?
 	$type_of_doc = 'acceptance_letter'; 
 	docUploadFormOfficerUI(); ?>
-	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p><?
+	sendMailForm();?>
 <p/>
 
 </fieldset>

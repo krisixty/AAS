@@ -16,7 +16,6 @@ include 'data_payments.php';
 include 'data_gerdocs.php';
 include 'data_regdocs_d.php';
 include 'data_other_d.php';
-include 'data_messages.php';
 include 'data_remarks_fur.php'; //további megjegyzések
 ?>
 <p>
@@ -25,6 +24,7 @@ include 'data_remarks_fur.php'; //további megjegyzések
 </form>
 
 <?php
+include 'data_messages.php';
 include 'data_decisions_d.php';
 include 'data_feedbacks.php';
 include 'data_tuitions.php';

@@ -22,11 +22,14 @@ while($sor=mysqli_fetch_array($feedbacks))
 <form action='new_feedback.php' method='post'>
 <input name="jel_id" type="hidden" value="<?php print $jel_id ?>" />
 <select name="fbyear">
-<?php //$y=date('Y'); echo $y; -kikommentelve, mert több évet kértek ?>
-<option>2014</option>
-<option>2013</option>   
-<option>2012</option>   
-<option>2011</option>   
+	<?php
+		$y=date('Y');
+		for($i=$y; $i>1990; $i--) {
+		?>
+			<option value="<?php echo $i; ?>"><?php echo $i; ?></option>   
+		<?php
+ 		}
+		?> 
 </select>
               
 <select name="fbmonth">

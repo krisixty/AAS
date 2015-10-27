@@ -11,11 +11,13 @@ $pieces = explode("-", $adate);
 echo $pieces[0]; // piece2
 ?></option>
 <?php //$y=date('Y'); echo $y; -kikommentelve, mert több évet kértek RENDBE RAKNI!!?>
-<option>2014</option> 
-<option>2013</option>
-<option>2012</option>   
-<option>2011</option>   
-<option>2010</option>   
+						<?php
+							  $y=date('Y');
+							  for($i=$y; $i>1990; $i--) 
+									{?>
+									<option value="<?php echo $i; ?>"><?php echo $i; ?></option>   
+						<?php 		} ?>
+
 </select>
 
 <select name="amonth">

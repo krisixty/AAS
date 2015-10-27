@@ -19,7 +19,6 @@ include 'data_afterappdocs.php'; //felvétel utáni dokumentumok - az appdocs, e
 include 'data_regdocs.php'; //beiratkozási dokumentumok
 include 'data_entrance.php'; //felvételi vizsga
 include 'data_other.php'; //más magyar egyetemre jelentkezett-e
-include 'data_messages.php'; //üzenetek
 include 'data_remarks_fur.php'; //további megjegyzések
 
 ?>
@@ -29,6 +28,7 @@ include 'data_remarks_fur.php'; //további megjegyzések
 </form>
 
 <?php
+include 'data_messages.php'; //üzenetek
 include 'data_decisions.php'; //döntések
 include 'data_feedbacks.php'; //visszajelzések
 include 'data_tuitions.php'; //tandíjbefizetések

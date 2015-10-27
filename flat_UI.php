@@ -5,6 +5,10 @@ do_html_header('');
 check_valid_user();
 $username=$_SESSION['valid_user'];
 
+if ($pageLanguage = 'german') {
+	include 'flatformLangGer.php';
+}
+
 $flat_id=$_POST['flat_id'];
 
 $conn = db_connect();
@@ -13,8 +17,6 @@ $conn = db_connect();
 	
 div_open();
 ?>
-<a href="flats_UI.php"><? print $linkFlatListLng;?></a><br><br>
-
 <fieldset class="text">
 	<legend class="text"><?print $formParagraphLng;?></legend>
 

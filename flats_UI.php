@@ -5,6 +5,9 @@ do_html_header('');
 check_valid_user();
 $username=$_SESSION['valid_user'];
 
+if ($pageLanguage = 'german') {
+	include 'flatformLangGer.php';
+}
 
 $conn = db_connect();
 

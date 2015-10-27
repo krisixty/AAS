@@ -273,4 +273,31 @@ function send_application_email($username)
     }
 } 
 
+function isPaidandEngOrGer() {
+
+	global $payment;
+	global $pageLanguage;
+
+		$conn = db_connect(); 
+	
+		$username=$_SESSION['valid_user'];
+		$result=$conn->query("SELECT * FROM applicants WHERE username='$username'");
+		$sor=mysqli_fetch_array($result);
+		$jel_id=$sor['jel_id'];
+		
+		$payment_result = $conn->query("SELECT * FROM tuitions WHERE jel_id='$jel_id'");
+		$row=mysqli_fetch_array($payment_result);
+		
+		if ($payment_result->num_rows>0) //vizsgálja, hogy adott-e már be jelentkezést
+			{
+			$payment = 'Y';
+			} 
+		
+		$bewerbung = $conn->query("SELECT program FROM jel_es_prog WHERE jel_id='$jel_id' AND (program='G1' OR program='V')");
+	
+		if ($bewerbung->num_rows>0)
+			{
+			$pageLanguage = 'german';
+			}
+}
 ?>

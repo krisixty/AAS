@@ -632,6 +632,21 @@ function dbSwitcherSelect() {
 ?>
 
 
+<?php
+	function sendMailForm($notification_type) {
+		
+		global $jel_id;
+		global $app_year;
+?>
+		<form action="mail_for_applicant.php" method="post">
+				<input type="hidden" id="jel_id" name="jel_id" value="<?php print $jel_id; ?>" />
+				<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+				<input type="hidden" id="notification_type" name="notification_type" value="<?php print $notification_type; ?>" />
+				<input type="submit" name="Submit" id="Submit" value="E-mail" />
+		</form>
+<?		
+	}
+?>
 
 
 
