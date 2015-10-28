@@ -60,7 +60,6 @@ if (!$result)
 
 function login($username, $password) //bejelentkezés jelentkezőknek
 {
-
 $conn = db_connect();
 $ds=$conn->query("SELECT ds FROM user WHERE username='$username'"); //megkeresi a ds-t
 $sor=mysqli_fetch_array($ds);
@@ -108,37 +107,21 @@ if ($result->num_rows>0)
 		throw new Exception('Could not log you in.');
 		}
 	}
-?>
-	
-<?php
-/*------------------------------------------------------------------------------------- DISPLAY LOGIN MESSSAGE---------------------------------------------*/
 
-	function display_login_message() {
-?>
-		<div class="grid-container">
-			<div class="grid-12">
-				<p class="login_message">Welcome <?php echo $_SESSION['valid_user'].','; ?> you are logged in to AAS. </p>
-			</div>
-		</div>
-<?php
-	}
-/*--END OF DISPLAY LOGIN MESSAGE--*/
-?>	
-
-
-<?php
 function check_valid_user()
 //ellenőrzi, h a user be van-e jelentkezve és értesíti
 {
   if (isset($_SESSION['valid_user']))
-  {
-	display_login_message();
+  {?>
+  <p class="fent_login">Welcome <?php
+      echo $_SESSION['valid_user'].',';
+      echo ' ';?>you are logged in to AAS. </p><?php  
   }
   else
   {
      // they are not logged in 
-     //do_html_heading();
-     //echo 'You are not logged in.<br />';
+     do_html_heading('Problem:');
+     echo 'You are not logged in.<br />';
      do_html_url('login.php', 'Login');
      do_html_footer();
      exit;
@@ -158,8 +141,7 @@ function check_valid_officer_user()
   {
      // they are not logged in 
      do_html_heading('Problem:');
-     echo '
-	 logged in.<br />';
+     echo 'You are not logged in.<br />';
      do_html_url('login2.php', 'Login');
      do_html_footer();
      exit;
@@ -273,6 +255,29 @@ function send_application_email($username)
     }
 } 
 
+function send_mail_for_applicant($applicant_username, $notification_type)
+// notify the user that their password has been changed
+{
+    include 'db_switcher.php';
+	//$conn = db_connect();
+    $result = $conn->query("SELECT email FROM user
+                            WHERE username='$applicant_username'");
+    if (!$result)
+    {
+      throw new Exception('Could not find email address.');  
+    }
+    else if ($result->num_rows==0)
+    {
+      throw new Exception('Could not find email address.');   // username not in db
+    }
+    else
+    {
+      $row = $result->fetch_object();
+      $to = $row->email;
+      include('email_notifier.php');
+    }
+}
+
 function isPaidandEngOrGer() {
 
 	global $payment;
@@ -300,4 +305,23 @@ function isPaidandEngOrGer() {
 			$pageLanguage = 'german';
 			}
 }
+
+function isEngOrGer() {
+
+	global $engOrGer;
+
+		include 'db_switcher.php';
+	
+		$bewerbung = $conn->query("SELECT program FROM jel_es_prog WHERE jel_id='$jel_id' AND (program='G1' OR program='V')");
+	
+		if ($bewerbung->num_rows>0)
+			{
+			$engOrGer = 'german';
+			}
+		else
+			{
+			$engOrGer = 'english';	
+			}
+}
+
 ?>
