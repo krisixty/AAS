@@ -114,11 +114,6 @@ include 'regdocs_entrance.php';
 //német képzés speciális dokumentumainak megjegyzésének változója
 $remarks_gd = trim(preg_replace('/\s+/', ' ', $_POST['remarks_gd'])); /*Kiveszi az entereket és a tabokat*/
 
-
-//üzenetek változója
-$message = trim(preg_replace('/\s+/', ' ', $_POST['message'])); /*Kiveszi az entereket és a tabokat*/
-
-
 //befizetések változói
 $pyear=$_POST['pyear'];
 $pmonth=$_POST['pmonth'];
@@ -565,27 +560,6 @@ else
 	}	
 }
 
-//üzenetek
-if($message)
-{
-
-$check_jel_id=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");
-
-if ($check_jel_id->num_rows==0) 
-	{
-		$insert_message=$conn->query
-	("INSERT INTO messages (jel_id, message) VALUES ('$jel_id', '$message')");
-	echo 'Üzenet rögzítve.';
-	?><br /><?php
-	}
-else
-	{
-	$update_messages=$conn->query
-	("UPDATE messages SET message='$message' WHERE jel_id='$jel_id'");
-	echo 'Üzenet frissítve.';	
-	?><br /><?php
-	}	
-}
 //befizetések
 $check_jel_id=$conn->query("SELECT * FROM payments WHERE jel_id='$jel_id'");
 

@@ -4,7 +4,7 @@ $sor=mysqli_fetch_array($messages);
 ?>
 <fieldset><legend>Üzenetek:</legend>
 
-<form action='new_message.php' method='post'>
+<form action='message_update.php' method='post'>
 	<input name="jel_id" type="hidden" value="<?php echo $jel_id ?>" />
 	<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
 	<textarea name="message" cols="100" rows="10" ><?php print $sor['message'] ?></textarea><br><br>
