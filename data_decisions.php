@@ -2,41 +2,49 @@
 <br />
 <?php
 $decisions=$conn->query("SELECT * FROM decisions WHERE jel_id='$jel_id'");
-
+$i = 1;
 while($sor=mysqli_fetch_array($decisions))
 	{
+	$dec_id = $sor['id'];
+	$notifmail = $sor['notifmail'];
 	?>
-	<form action='del_decision.php' method='post'>
-    <input name="jel_id" type="hidden" value="<?php print $jel_id ?>" />
-    <input name="dec_id" type="hidden" value="<?php print $sor['id'] ?>" />
-	 <br />Döntés dátuma: <?php print $sor['date'].': '; ?><br />
+	<fieldset><legend>Döntés <? echo $i; ?>.</legend>
+	 Döntés dátuma: <?php print $sor['date']; ?><br />
      Döntés: <?php include 'decisions_english.php';?>
 	 Program: <?php include 'programs_dec.php';?>
 	 Döntés alapja: <?php print $sor['basis'];?><br />
    	 Visszajelzési határidő: <?php print $sor['dfdate'];?><br />
 	 Letter sent via e-mail: <?php print $sor['emaildate'];?><br />
      Letter sent to:
-<?php 
-	 
-	if($sor['tocas']=='C')	
-		{
-		print 'College International';
+		<?php 
+			if($sor['tocas']=='C')	
+				{
+				print 'College International';
+				}
+			if($sor['tocas']=='A')	
+				{
+				print 'Avicenna';
+				}
+			if($sor['tocas']=='S')	
+				{
+				print 'Student';
+				}
+		?>
+	Dátum: <?php print $sor['letterdate'];?><br /><br />
+	<?
+	//ha nincs még értesítő email küldve, akkor megjeleníti a törlés és az e-mail küldő gombot
+	if($notifmail == 0) {
+			delDecision();
+			$notification_type = "decision";
+			sendMailForm($notification_type);
 		}
-	if($sor['tocas']=='A')	
-		{
-		print 'Avicenna';
+		else {
+		?>
+			E-mail küldés dátuma: <?php print $notifmail; ?><br>
+		<?
 		}
-	if($sor['tocas']=='S')	
-		{
-		print 'Student';
-		}
-?>
-Dátum: <?php print $sor['letterdate'];?><br />
-	
-	<input name="app_year" type="hidden" value="<?php print $app_year ?>" />
-    <input type='submit' name='submit' value='Töröl'>
-	</form>
-	<?php 
+	$i++;
+	?></fieldset><?
 	}
 ?>
 <br /><fieldset><legend>Döntés:</legend><br />
@@ -197,11 +205,9 @@ Dátum:
 <p>Felvételi levelek:<br>
 <?
 	$type_of_doc = 'acceptance_letter';
-	$notification_type = 'decision';
 	docUploadFormOfficerUI(); ?>
-	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p><?
-	sendMailForm($notification_type);?>
-<p/>
+	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+</p>
 
 </fieldset>
 <?php include 'data_remarks_dec.php';?>

@@ -282,6 +282,8 @@ function isPaidandEngOrGer() {
 
 	global $payment;
 	global $pageLanguage;
+	global $app_year;
+	global $jel_id;
 
 		$conn = db_connect(); 
 	
@@ -309,6 +311,8 @@ function isPaidandEngOrGer() {
 function isEngOrGer() {
 
 	global $engOrGer;
+	global $app_year;
+	global $jel_id;
 
 		include 'db_switcher.php';
 	

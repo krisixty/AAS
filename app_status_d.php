@@ -210,21 +210,41 @@ div_open();
 				?>
 				
 				
+				
+			<fieldset class="text2">
+					<legend class="text2">Botschaften</legend>
 				<?	
-				//Ha talál üzenetet, akkor kiírja azt	
+				//Ha talál üzenetet, akkor megvizsgálja, hogy arról ment-e értesítés e-mailben. Ha igen, akkor azt megjeleníti a jelentkező felületén.
 				$messages=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");
 				if ($messages->num_rows>0) 
 					{
-					$sor=mysqli_fetch_array($messages);?>
-					
-					<fieldset class="text2">
-						<legend class="text2">Botschaften</legend>
-							<?php print $sor['message']; ?> 
-					</fieldset>	
-					
-					<?php
-					}
+						while($sor=mysqli_fetch_array($messages)){	
 
+							$email_dt = $sor['email_dt'];
+							
+							if($email_dt != 0) {
+								?><p><?
+								print $email_dt.'<br >';
+								print $sor['message']; 
+								?></p><?
+							}
+							/*
+							//Ha van üzenet, de nincs kiküldve:
+							else {
+								echo 'You have no message yet.';
+							}
+							*/
+						}
+					}
+					/*
+					//Ha nincs üzenet:
+					else {
+						echo 'You have no message yet.';
+					}
+					*/
+				?>
+				</fieldset>	
+				<?
 
 				//Ha talál 'Felvéve' döntést, akkor kiírja a beiratkozási dokumentumokat
 				$accepted=$conn->query("SELECT * FROM jel_es_prog WHERE jel_id='$jel_id' AND decision='F'");

@@ -10,6 +10,7 @@ include 'db_switcher.php';
 
 $jel_id = $_POST['jel_id'];
 $m_id = $_POST['m_id']; 
+$dec_id = $_POST['dec_id']; 
 
 $notification_type = $_POST['notification_type'];
 
@@ -30,9 +31,16 @@ echo $applicant_username;
 
 	if($m_id) {	
 	$email_dt = date("Y-m-d-H-i-s");
-	$update_messags=$conn->query
+	$update_messages=$conn->query
 	("UPDATE messages SET email_dt ='$email_dt' WHERE m_id = '$m_id'");
 	//echo 'Üzenet frissítve.';	
+	}
+
+	if($dec_id) {	
+		$notifmail = date("Y-m-d-H-i-s");
+		$update_decisions=$conn->query
+		("UPDATE decisions SET notifmail ='$notifmail' WHERE id = '$dec_id'");
+		//echo 'Üzenet frissítve.';	
 	}
 
 

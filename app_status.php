@@ -162,28 +162,43 @@ div_open();
 		
 		<fieldset class="text2">
 			<legend class="text2">Decision(s)</legend>
-		
-			<?php
-			//Ha talál döntést, akkor kiírja azt	
-			$decisions=$conn->query("SELECT * FROM decisions WHERE jel_id='$jel_id'");
-			if ($decisions->num_rows>0)
-				{
-				while($sor=mysqli_fetch_array($decisions))
-					{ 
-					?>
-					Program: <?php include 'programs_dec.php';?>
-					Decision: <?php include 'decisions_english.php';?>
-					Deadline: <?php print $sor['dfdate'];?><br /><br />
-					<?php
+				<?php
+				//Ha talál döntést, akkor megvizsgálja, hogy arról ment-e értesítés e-mailben. Ha igen, akkor azt megjeleníti a jelentkező felületén.	
+				$decisions=$conn->query("SELECT * FROM decisions WHERE jel_id='$jel_id' ORDER BY date");
+				if ($decisions->num_rows>0)
+					{
+						while($sor=mysqli_fetch_array($decisions)){ 
+						
+							$notifmail = $sor['notifmail'];
+							$decisionDate = $sor['date'];
+						
+							if($notifmail != 0) {
+									?><p><?
+									print $decisionDate.'<br >';
+									?>
+									Program: <?php include 'programs_dec.php';?>
+									Decision: <?php include 'decisions_english.php';?>
+									Deadline: <?php print $sor['dfdate'];?>
+									</p>
+									<?
+								}
+								
+								/*
+								//Ha van döntés, de nincs kiküldve:
+								else {
+									echo 'No decision yet.';
+								}
+							}
+						}
+						//Ha nincs döntés:
+						else {
+							echo 'No decision yet.';
+							*/
+						}
 					}
-				}
-			else
-				{
-				?>No decision yet.<br /> <?php
-				}
-			?>
-		</fieldset>
-			
+						
+					?>
+			</fieldset>			
 		
 		
 		
@@ -204,20 +219,40 @@ div_open();
 				?>
 
 			
-
-		<?
-			//Ha talál üzenetet, akkor kiírja azt	
-			$messages=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");
-			if ($messages->num_rows>0) 
-				{
-				$sor=mysqli_fetch_array($messages);?>
-			
-				<fieldset class="text2">
+			<fieldset class="text2">
 					<legend class="text2">Messages</legend>
-						<?php print $sor['message']; ?> 
-				</fieldset>
-				<?php
-				}
+				<?	
+				//Ha talál üzenetet, akkor megvizsgálja, hogy arról ment-e értesítés e-mailben. Ha igen, akkor azt megjeleníti a jelentkező felületén.
+				$messages=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");
+				if ($messages->num_rows>0) 
+					{
+						while($sor=mysqli_fetch_array($messages)){	
+
+							$email_dt = $sor['email_dt'];
+							
+							if($email_dt != 0) {
+								?><p><?
+								print $email_dt.'<br >';
+								print $sor['message']; 
+								?></p><?
+							}
+							/*
+							//Ha van üzenet, de nincs kiküldve:
+							else {
+								echo 'You have no message yet.';
+							}
+						}
+					}
+					//Ha nincs üzenet:
+					else {
+						echo 'You have no message yet.';
+						*/
+						}
+					}
+					
+				?>
+				</fieldset>	
+				<?
 
 
 			//Ha talál 'Felvéve' döntést, akkor kiírja a beiratkozási dokumentumokat

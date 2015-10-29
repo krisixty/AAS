@@ -638,10 +638,12 @@ function dbSwitcherSelect() {
 		global $jel_id;
 		global $app_year;
 		global $m_id;
+		global $dec_id;
 ?>
 		<form action="mail_for_applicant.php" method="post">
 				<input type="hidden" id="jel_id" name="jel_id" value="<?php print $jel_id; ?>" />
 				<input name="m_id" type="hidden" value="<?php print $m_id; ?>" />
+				<input name="dec_id" type="hidden" value="<?php print $dec_id; ?>" />
 				<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
 				<input type="hidden" id="notification_type" name="notification_type" value="<?php print $notification_type; ?>" />
 				<input type="submit" name="Submit" id="Submit" value="E-mail" />
@@ -668,8 +670,22 @@ function dbSwitcherSelect() {
 	}
 ?>
 
-
-
+<?php
+	function delDecision() {
+		
+		global $jel_id;
+		global $app_year;
+		global $dec_id;
+?>
+		<form action='del_decision.php' method='post' onsubmit="return confirm('Valóban törölni akarja ezt a döntést?')">
+			<input name="jel_id" type="hidden" value="<?php print $jel_id; ?>" />
+			<input name="dec_id" type="hidden" value="<?php print $dec_id; ?>" />
+			<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+		<input type='submit' name='submit' value='Töröl'>
+		</form>
+<?
+	}
+?>
 
 
 

@@ -5,6 +5,7 @@ $messages=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");
 <fieldset><legend>Üzenetek:</legend>
 <?
 isEngOrGer();
+
 if ($engOrGer == 'german') {
 	$notification_type = 'message_d';
 	}

@@ -92,14 +92,6 @@ Visszajelzési határidő:
 
 </form>
 
-<p>Felvételi levelek:<br>
-<?
-	$type_of_doc = 'acceptance_letter'; 
-	docUploadFormOfficerUI(); ?>
-	<p class="uploadedDocs"><? include 'shwUDocs.php';?></p><?
-	sendMailForm();?>
-<p/>
-
 </fieldset>
 <?php include 'data_remarks_dec.php';?>
 </fieldset>
