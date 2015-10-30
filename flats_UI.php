@@ -12,7 +12,7 @@ if ($pageLanguage == 'german') {
 
 $conn = db_connect();
 
-$flats_result_forPg=$conn->query("SELECT * FROM flats ORDER BY flat_id");
+$flats_result_forPg=$conn->query("SELECT * FROM flats WHERE ispublic = '1' ORDER BY flat_id");
 
 $row_cnt = $flats_result_forPg->num_rows; //megszámolja az applicants tábla sorainak számát
 $rows_per_page=25;
@@ -51,7 +51,7 @@ else
 	$limit_num=0;
 	}	
 	
-$flats_result=$conn->query("SELECT * FROM flats ORDER BY flat_id LIMIT $limit_num, $limit");
+$flats_result=$conn->query("SELECT * FROM flats WHERE ispublic = '1' ORDER BY flat_id LIMIT $limit_num, $limit");
 
 
 $picsPath="../maintest/upload/";

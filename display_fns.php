@@ -279,7 +279,7 @@ function display_user_menu(){
 						isPaidandEngOrGer();
 						if ($payment == 'Y') {
 						?>
-							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Appartments to Let</a></li> 
+							<li><a href="flats_UI.php" class="<?php //echo $cont_sel; ?>">Apartments to Let</a></li> 
 						<?
 						}
 						?>

@@ -23,6 +23,7 @@ $flats_result=$conn->query("SELECT * FROM flats ORDER BY flat_id");
 				<td><?php print $formRoom_NumberLng;?></td>
 				<td><?php print $formPriceLng;?></td>
 				<td><?php print $formNameLng;?></td>
+				<td><?php print $formPublicLng;?></td>
 		</tr>       	
 		<?php
 		while($sor=mysqli_fetch_array($flats_result))
@@ -38,6 +39,17 @@ $flats_result=$conn->query("SELECT * FROM flats ORDER BY flat_id");
 				<td><?php print $sor['room_number'];?></td>
 				<td><?php print $sor['price'];?></td>
 				<td><?php print $sor['name'];?></td>
+				<td><?php $ispublic = $sor['ispublic'];
+				
+					if ($ispublic == 1) {
+						echo $formYesLng;
+					}
+					
+					if ($ispublic == 0) {
+						echo $formNoLng;
+					}
+				
+				?></td>
 				<td>
 		<form action="flatform.php" method="post" id="form1">
 		<input name="flat_id" type="hidden" value="<?php print $sor['flat_id']?>" />

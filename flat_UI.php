@@ -47,26 +47,6 @@ div_open();
 							}
 						} 
 		?>
-		<!--
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-			<li>
-				<img src="css/images/1.jpg">
-			</li>
-		-->	
 		</ul>
 </fieldset>
 <?php

@@ -6,7 +6,7 @@ print $formStreetLng.' '.$street.'<br>';
 print $formNumberLng.' '.$number.'<br>';
 print $formPostCodeLng.' '.$postcode.'<br>';
 print $formFlat_TypeLng.' '.$flat_type.'<br>';
-print $formFlat_SizeLng.' '.$flat_size.'<br>';
+print $formFlat_SizeLng.' '.$flat_size.' m2<br>';
 print $formRoom_NumberLng.' '.$room_number.'<br><br>';
 ?></fieldset><?
 
@@ -42,9 +42,9 @@ print $formExtrasLng.' '.$extras.'<br>';
 ?><fieldset class="text2">
 			<legend class="text2"><?print $formCostsLng;?></legend><?
 			
-print $formPriceLng.' '.$price.'<br>';
-print $formAdd_CostLng.' '.$add_cost.'<br>';
-print $formDepositLng.' '.$deposit.'<br>';
+print $formPriceLng.' '.$price.' HUF<br>';
+print $formAdd_CostLng.' '.$add_cost.' HUF<br>';
+print $formDepositLng.' '.$deposit.' HUF<br>';
 ?></fieldset><?
 
 ?><fieldset class="text2">
@@ -53,6 +53,8 @@ print $formContactLng.'<br>';
 print $formNameLng.' '.$name.'<br>';
 print $formPhoneLng.' '.$phone_num.'<br>';
 print $formEmailLng.' '.$email.'<br>';
+
+print $formPublishLng.' '; if ($ispublic == 1) {print $formPublishLng.'<br>';};
 ?></fieldset><?
 
 //print $formRegisterLng.' '.$submit.'<br>';

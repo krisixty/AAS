@@ -402,6 +402,11 @@ function display_officers_info()
 		global $formNameLng;
 		global $formPhoneLng;
 		global $formEmailLng;
+		
+		global $ispublic; if($ispublic==1) {$ispublic='checked';} else {$ispublic=' ';} ;
+		
+		global $formPublicLng;
+		global $formPublishLng;
 
 		global $formRegisterLng;
 
@@ -538,8 +543,12 @@ function display_officers_info()
 					<!--<input type="submit" id="submit" name="submit" value="Upload">-->
 				</fieldset>
 				<br>
-				<br>
-						
+				<fieldset>
+					<legend><?php print $formPublicLng; ?></legend>
+					<?php print $formPublishLng; ?>
+					<input type="checkbox" name="ispublic" id="ispublic" value="1" <?php print $ispublic;?>>
+				</fieldset>
+					<br>		
 				<button type="submit"><?php print $formRegisterLng; ?></button>
 						
 			</fieldset>	
@@ -687,8 +696,34 @@ function dbSwitcherSelect() {
 	}
 ?>
 
+<?php
+	function dataBoardSwitcher() {
+		
+		global $jel_id;
+		global $app_year;
+		global $pg_name;
+		
+		if ($pg_name == 'applicant_d') {
+			$formAction ='applicant.php';
+			$dataBoardName = 'Angol adatlap';	
+		}
+		if ($pg_name == 'applicant') {
+			$formAction ='applicant_d.php';
+			$dataBoardName = 'Német adatlap';
+		}
+		
+		//global $app_name;
+?>
+		<form action='<?php print $formAction; ?>' method='post'>
+			<input name="jel_id" type="hidden" value="<?php print $jel_id; ?>" />
+			<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+			
+		<input type='submit' name='submit' value='<?php print $dataBoardName; ?>'>
+		</form>
 
-
+<?php
+}
+?>
 
 
 

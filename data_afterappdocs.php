@@ -87,6 +87,9 @@ Anyaga teljes? <select name="comp"> <?php //appdocs ?>
 	$type_of_doc = 'HB_vacc'; 
 	include 'shwUDocs.php';
 
+	$type_of_doc = 'HC_test'; 
+	include 'shwUDocs.php';
+	
 	$type_of_doc = 'hiv_test'; 
 	include 'shwUDocs.php';
 
@@ -100,6 +103,9 @@ Anyaga teljes? <select name="comp"> <?php //appdocs ?>
 	include 'shwUDocs.php';
 
 	$type_of_doc = 'birthcert'; 
+	include 'shwUDocs.php';
+	
+	$type_of_doc = 'labreport'; 
 	include 'shwUDocs.php';
 
 ?>

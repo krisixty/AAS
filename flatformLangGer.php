@@ -3,7 +3,7 @@
 	$formParagraphLng = "Wohnung zu vermieten";
 	$flatInfo = "General";
 	$formStreetLng= "Straße:";
-	$formNumberLng = "Number:";
+	$formNumberLng = "Nummer:";
 	$formPostCodeLng="PLZ:";
 	$formFlat_TypeLng="Typ der Wohnung:";
 		$formFT_1="renoviert";
@@ -14,7 +14,7 @@
 		$formFT_6="Ziegelbau";
 		$formFT_7="Neubau";
 			
-	$formFlat_SizeLng="Güße der Wohnung:";
+	$formFlat_SizeLng="Größe der Wohnung:";
 	$formRoom_NumberLng="Anzahl der Zimmer (Schlafzimmer + Wohnzimmer):";
 	
 	$formFlatAdditionalLng="Additional Information"; 
@@ -31,11 +31,11 @@
 	$formLibraryLng="Bibliothek";
 
 
-	$formFurnishedLng="Möbiliert:";
+	$formFurnishedLng="Möbliert:";
 	$formYes_1_Lng="Ja";
 	$formNo_1_Lng="Nein";
 
-	$formAppliancesLng="Austattung:";
+	$formAppliancesLng="Ausstattung:";
 	$formStoveLng="Herd";
 	$formTvLng="Fernseher";
 	$formFridgeLng="Khülschrank";
@@ -56,10 +56,15 @@
 	$formPhoneLng="Telefonnummer:";
 	$formEmailLng="E-Mail:";
 
+	$formPublicLng="Public";
+	$formPublishLng="Published";
 
 	$formRegisterLng="Submit";
 	$buttonMoreLng ="Mehr";
 	$linkFlatListLng ="List of Apartments (ford. kell.)";
+	
+	$formYesLng = 'Ja';
+	$formNoLng = 'Nein';
 
 	$formFooterLng="Es wird zur Kenntnis genommen, dass die Universität Szeged nach dem Abschluß des Mietvertrags keine Verantwortung bezüglich der Wohnungsvermietung übernimmt.  ";
 

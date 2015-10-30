@@ -118,6 +118,9 @@ A beiratkozáshoz szükséges dokumentumok beadásra kerültek? <select name="rd
 
 	$type_of_doc = 'HB_vacc'; 
 	include 'shwUDocs.php';
+	
+	$type_of_doc = 'HC_test'; 
+	include 'shwUDocs.php';
 
 	$type_of_doc = 'hiv_test'; 
 	include 'shwUDocs.php';
@@ -132,6 +135,9 @@ A beiratkozáshoz szükséges dokumentumok beadásra kerültek? <select name="rd
 	include 'shwUDocs.php';
 
 	$type_of_doc = 'birthcert'; 
+	include 'shwUDocs.php';
+	
+	$type_of_doc = 'labreport'; 
 	include 'shwUDocs.php';
 
 ?>

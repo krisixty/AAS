@@ -60,4 +60,5 @@ else
 </td>
 </tr>
 </table>
+<? dataBoardSwitcher(); ?>
 </fieldset>

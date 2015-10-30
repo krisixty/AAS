@@ -18,9 +18,9 @@ include 'db_switcher.php';
 
 	if ($flat_idCheck->num_rows==0) 
 		{
-			if ($insert_flat=$conn->query("INSERT INTO flats (street, number, postcode, flat_type, flat_size, room_number, bus, tram, trolley, shop, restaurant, library, furnished, stove, tv, fridge, w_machine, micro, vacum, internet, distance, extras, price, add_cost, deposit, name, phone_num , email)
+			if ($insert_flat=$conn->query("INSERT INTO flats (street, number, postcode, flat_type, flat_size, room_number, bus, tram, trolley, shop, restaurant, library, furnished, stove, tv, fridge, w_machine, micro, vacum, internet, distance, extras, price, add_cost, deposit, name, phone_num , email, ispublic)
 			VALUES
-			('$street', '$number', '$postcode', '$flat_type', '$flat_size', '$room_number', '$bus', '$tram', '$trolley', '$shop', '$restaurant', '$library', '$furnished', '$stove', '$tv', '$fridge', '$w_machine', '$micro', '$vacum', '$internet', '$distance', '$extras', '$price', '$add_cost', '$deposit', '$name', '$phone_num', '$email')")
+			('$street', '$number', '$postcode', '$flat_type', '$flat_size', '$room_number', '$bus', '$tram', '$trolley', '$shop', '$restaurant', '$library', '$furnished', '$stove', '$tv', '$fridge', '$w_machine', '$micro', '$vacum', '$internet', '$distance', '$extras', '$price', '$add_cost', '$deposit', '$name', '$phone_num', '$email', '$ispublic')")
 			)	{
 					$flat_id = $conn->insert_id;
 					echo 'Új albérlet rögzítve.<br>';
@@ -36,7 +36,7 @@ include 'db_switcher.php';
 			if ($updateFlat=$conn->query
 			("UPDATE flats SET street='$street', number='$number', postcode='$postcode', flat_type='$flat_type', flat_size='$flat_size', room_number='$room_number', bus='$bus', tram='$tram', trolley='$trolley', shop='$shop', restaurant='$restaurant', library='$library', 
 			furnished='$furnished', stove='$stove', tv='$tv', fridge='$fridge', w_machine='$w_machine', micro='$micro', vacum='$vacum', internet='$internet', distance='$distance', extras='$extras', price='$price', add_cost='$add_cost', deposit='$deposit', name='$name', phone_num='$phone_num', 
-			email='$email' WHERE flat_id='$flat_id'")) {
+			email='$email', ispublic='$ispublic' WHERE flat_id='$flat_id'")) {
 		
 				echo 'Albérletadatok frissítve.';			
 			}
@@ -127,6 +127,12 @@ echo $formNameLng.$name.'<br>';
 echo $formPhoneLng.$phone_num.'<br>';
 echo $formEmailLng.$email.'<br>';
 
+echo '<br>'.$formPublicLng.': <br>'; 
+
+	if($ispublic)
+		{
+		echo $formPublishLng.'<br>';
+		}
 
 include 'upload_flatpic.php';
 

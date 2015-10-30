@@ -42,6 +42,8 @@ $name=trim($_POST['name']);
 $phone_num=preg_replace("/[^0-9+]/", "", $_POST['phone_num']);
 $email=trim($_POST['email']);
 
+$ispublic=$_POST['ispublic'];
+
 
 
 

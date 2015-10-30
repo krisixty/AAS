@@ -37,4 +37,5 @@ $deposit = $row['deposit'];
 $name = $row['name'];
 $phone_num = $row['phone_num'];
 $email = $row['email'];
+$ispublic = $row['ispublic'];
 ?>

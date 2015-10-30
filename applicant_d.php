@@ -1,4 +1,5 @@
 <?php
+$pg_name = 'applicant_d';
 require_once('aas_includes.php');
 session_start();
 do_html_header('');
@@ -7,6 +8,9 @@ display_officer_menu();
 $username=$_SESSION['valid_user'];
 
 include 'db_switcher.php';
+
+//Sets interface for displaying uploaded files
+$interface = 'officerUI';	
 
 $jel_id=$_POST['jel_id']; 
 ?>

@@ -1,6 +1,6 @@
 <?php
 
-	$formParagraphLng = "Apartment for rent";
+	$formParagraphLng = "Apartment to let";
 	$flatInfo = "General";
 	$formStreetLng= "Street:";
 	$formNumberLng = "Number:";
@@ -55,10 +55,16 @@
 	$formNameLng="Name:";
 	$formPhoneLng="Phone number:";
 	$formEmailLng="Email:";
+	
+	$formPublicLng="Public";
+	$formPublishLng="Published";
 
 	$formRegisterLng="Submit";
 	$buttonMoreLng ="More";
 	$linkFlatListLng ="List of Apartments";
+	
+	$formYesLng = 'Yes';
+	$formNoLng = 'No';
 
 	$formFooterLng="Both parties notice that the University of Szeged does not bear any responsibility concerning the lending of the apartment, once the rental contract is signed. ";
 

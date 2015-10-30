@@ -56,10 +56,15 @@
 	$formPhoneLng="Telefonszám:";
 	$formEmailLng="Email:";
 
+	$formPublicLng="Közzététel";
+	$formPublishLng="Közzétesz";
 
 	$formRegisterLng="Submit";
 	$buttonMoreLng ="Több";
 	$linkFlatListLng ="Lakások listája";
+	
+	$formYesLng = 'Igen';
+	$formNoLng = 'Nem';
 
 	$formFooterLng="Mindkét fél tudomásul veszi, hogy a szerződés megkötését követően az SZTE-t semmilyen jellegű felelősség nem terheli a lakás bérbeadását illetően.";
 
