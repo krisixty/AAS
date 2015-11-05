@@ -65,6 +65,10 @@
 	
 	$formYesLng = 'Ja';
 	$formNoLng = 'Nein';
+	
+	$formWelcomeLng = 'Hier finden Sie die Liste der Mietwohnungen, die für die Studenten der deutsch- und englischsprachigen Studiengänge der Medizinischen Fakultät erreichbar sind. <br> Fall Sie Interesse an einer der Wohnungen haben, wenden Sie sich bitte an unsere Kollegen.';
+	$formWelcomeEmailLng = 'Tel.: 003662342059';
+	$formWelcomeTelLng = 'E-Mail: flatrent.fs@med.u-szeged.hu';
 
 	$formFooterLng="Es wird zur Kenntnis genommen, dass die Universität Szeged nach dem Abschluß des Mietvertrags keine Verantwortung bezüglich der Wohnungsvermietung übernimmt.  ";
 

@@ -12,12 +12,16 @@ require_once('useful_fns.php');
 
 	//include 'flatformLangGer.php';
 	include 'flatformLangEng.php';
-	//include 'flatformLangHun.php;'77
+	//include 'flatformLangHun.php;'
+	
+$picsPath="../maintest/upload/";
+
+require_once('mimereader.class.php');	
 
 /*	
-require_once('mimereader.class.php');	
-	
 $picsPath="../maintest/upload/";	
 $docsPath="../maintest/upload/docs/";	
 */
+//$picsPath="upload/";	
+$docsPath="upload/docs/";
 ?>

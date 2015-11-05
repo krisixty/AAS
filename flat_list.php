@@ -1,5 +1,5 @@
 <?php
-require_once('aas_includes_UI_test.php');
+require_once('aas_includes.php');
 //require_once('aas_includes.php'); 
 session_start();
 do_html_header('');
@@ -9,6 +9,15 @@ $username=$_SESSION['valid_user'];
 
 include 'db_switcher.php';
 
+//Adatbázis választó táblázat:
+	$formAction = 'flat_list.php';
+	dbSwitcherSelect();
+
+?>
+<br><br><br>
+<a href="flatform.php">Új albérlet felvitele</a><br>	
+
+<?
 $flats_result=$conn->query("SELECT * FROM flats ORDER BY flat_id");
 ?>
 

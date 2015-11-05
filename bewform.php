@@ -35,7 +35,7 @@ display_application_info_d();
 
 Hiermit bewerbe ich mich für das Studium der<br><br>
 
-	<?php //include 'list_of_app_progs_d2.php'; //a választható német programok listája _d: összes, _d2: vorb és paralell english?> 
+	<?php include 'list_of_app_progs_d.php'; //a választható német programok listája _d: összes, _d2: vorb és paralell english?> 
        
 
 	<label for="fname">Nachname:</label>

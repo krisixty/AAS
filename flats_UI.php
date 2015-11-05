@@ -20,7 +20,11 @@ $no_of_pages=ceil($row_cnt/$rows_per_page);
 
 $limit=$rows_per_page; //elosztja az oldalszámmal
 div_open();
-?>
+?><p><?
+	echo $formWelcomeLng.'<br><br>';
+	echo $formWelcomeTelLng.'<br>';
+	echo $formWelcomeEmailLng;
+?></p>
 <ul>
 	<li>
 <?php

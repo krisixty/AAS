@@ -1,5 +1,6 @@
 <?php
-require_once('aas_includes_UI_test.php');
+$pg_name = 'register_flat';
+require_once('aas_includes.php');
 //require_once('aas_includes.php'); 
 session_start();
 do_html_header('');

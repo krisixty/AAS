@@ -226,7 +226,7 @@ function display_officer_menu()
 <a href="applicants.php">Jelentkezők - angol</a> |
 <a href="applicants_d.php">Jelentkezők - német</a> |
 <a href="queries.php">Lekérdezések</a> |
-<a href="flat_admin.php">Albérletek (teszt)</a> |
+<a href="flat_list.php">Albérletek (teszt)</a> |
 <a href="logout.php">Logout</a> 
 </p>
 <?php
@@ -414,15 +414,18 @@ function display_officers_info()
 						
 		//flat id
 		global $flat_id;
+		
+		//app year
+		global $app_year;
 
 ?>
 
 		<form method='post' action='register_flat.php' enctype="multipart/form-data">
-		<fieldset>	
-			<legend><?php print $formParagraphLng; ?></legend>	
-				
+	
 				<fieldset>	
 					<legend><?print $flatInfo;?></legend>
+					
+						Flat ID: <?print $flat_id;?><br>
 			               
                         <label for="street"><?php print $formStreetLng; ?></label>              
                         <input type="text" id="street" name="street" size="30" maxlength="100" value="<?php print $street;?>">           
@@ -548,11 +551,12 @@ function display_officers_info()
 					<?php print $formPublishLng; ?>
 					<input type="checkbox" name="ispublic" id="ispublic" value="1" <?php print $ispublic;?>>
 				</fieldset>
-					<br>		
+					<br>	
+				
+				<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+				
 				<button type="submit"><?php print $formRegisterLng; ?></button>
 						
-			</fieldset>	
-
         </form>
 		
 <!--
@@ -582,9 +586,39 @@ function display_officers_info()
 function backToFlat() {
 
 	global $flat_id;
+	global $app_year;
+	global $formAction;
+	global $pg_name;
+	
+		if ($pg_name == 'del_flat') {
+			$formAction = 'flat_list.php';
+		}
+		if ($pg_name == 'register_flat') {
+			$formAction = 'flatform.php';
+		}
+	
 ?>
-		<form action="flatform.php" method="post">
+		<form action="<?php print $formAction ?>" method="post">
 				<input name="flat_id" type="hidden" value="<?php print $flat_id; ?>" />
+				<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+				<input type="submit" name="Submit" id="Submit" value="OK" />
+		</form>
+<?php
+}
+?>
+
+<?php
+function backBack() {
+
+	global $app_year;
+	global $formAction;
+	global $pg_name;
+	
+		if ($pg_name == 'programs_to_apply') {
+			$formAction = 'applicationhandler.php';
+		}	
+?>
+		<form action="<?php print $formAction ?>" method="post">
 				<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
 				<input type="submit" name="Submit" id="Submit" value="OK" />
 		</form>
@@ -696,6 +730,23 @@ function dbSwitcherSelect() {
 	}
 ?>
 
+
+<?php
+	function delFlat() {
+		
+		global $app_year;
+		global $flat_id;
+?>
+		<form action='del_flat.php' method='post' onsubmit="return confirm('Valóban törölni akarja ezt a lakást?')">
+			<input name="flat_id" type="hidden" value="<?php print $flat_id ?>" />
+			<input name="app_year" type="hidden" value="<?php print $app_year ?>" />
+			<input type='submit' name='submit' value='Lakás törlése'>
+		</form>
+<?
+	}
+?>
+
+
 <?php
 	function dataBoardSwitcher() {
 		
@@ -722,6 +773,114 @@ function dbSwitcherSelect() {
 		</form>
 
 <?php
+}
+?>
+
+
+<?php
+function display_appHandlerForm() {
+	
+	//Language globals
+	global $formRegisterLng;
+	global $app_year;
+	
+	//Program globals
+		//Medicine
+		global $M1; if($M1==1) {$M1='checked';} else {$M1=' ';} ;
+		global $M1e; if($M1e==1) {$M1e='checked';} else {$M1e=' ';} ;
+		global $A; if($A==1) {$A='checked';} else {$A=' ';} ;
+		global $M2; if($M2==1) {$M2='checked';} else {$M2=' ';} ;
+		global $M3; if($M3==1) {$M3='checked';} else {$M3=' ';} ;	
+
+		//Dentistry
+		global $D1; if($D1==1) {$D1='checked';} else {$D1=' ';} ;
+		global $D1e; if($D1e==1) {$D1e='checked';} else {$D1e=' ';} ;
+		global $D2; if($D2==1) {$D2='checked';} else {$D2=' ';} ;
+		global $D3; if($D3==1) {$D3='checked';} else {$D3=' ';} ;
+
+		//Pharmacy
+		global $P1; if($P1==1) {$P1='checked';} else {$P1=' ';} ;
+		global $P1e; if($P1e==1) {$P1e='checked';} else {$P1e=' ';} ;
+		global $P2; if($P2==1) {$P2='checked';} else {$P2=' ';} ;
+		global $P3; if($P3==1) {$P3='checked';} else {$P3=' ';} ;	
+
+		//Foundation Year
+		global $F; if($F==1) {$F='checked';} else {$F=' ';} ;
+		
+		//German
+		global $G1; if($G1==1) {$G1='checked';} else {$G1=' ';} ;
+		global $V; if($V==1) {$V='checked';} else {$V=' ';} ;		
+
+?>
+	<fieldset>	
+		<legend>Programokra jelentkezés engedélyezése</legend>
+	
+		<form method='post' action='programs_to_apply.php'>
+
+        <fieldset>	   
+		   <legend>Doctor of Medicine</legend>
+			Entrance examination for year 1
+			<input type="checkbox" name="M1" id="M1" value="1" <?php print $M1;?>><br>
+			Exemption from the entrance examination for year 1
+			<input type="checkbox" name="M1e" id="M1e" value="1" <?php print $M1e;?>><br>
+			Anatomy Summer Course + Transfer to year 2
+			<input type="checkbox" name="A" id="A" value="1" <?php print $A;?>><br>
+			Transfer to 2nd year
+			<input type="checkbox" name="M2" id="M2" value="1" <?php print $M2;?>><br>
+			Transfer to 3rd year
+			<input type="checkbox" name="M3" id="M3" value="1" <?php print $M3;?>><br>
+			<br>
+			Humanmedizin in deutscher Sprache
+			<input type="checkbox" name="G1" id="G1" value="1" <?php print $G1;?>><br>
+			
+		</fieldset>
+		
+		<br>
+		
+		<fieldset>	   
+		   <legend>Doctor of Dentistry</legend>
+			Entrance examination for year 1
+			<input type="checkbox" name="D1" id="D1" value="1" <?php print $D1;?>><br>
+			Exemption from the entrance examination for year 1
+			<input type="checkbox" name="D1e" id="D1e" value="1" <?php print $D1e;?>><br>
+			Transfer to 2nd year
+			<input type="checkbox" name="D2" id="D2" value="1" <?php print $D2;?>><br>
+			Transfer to 3rd year
+			<input type="checkbox" name="D3" id="D3" value="1" <?php print $D3;?>><br>
+		</fieldset>
+		
+		<br>
+		
+		<fieldset>	   
+		   <legend>Doctor of Pharmacy</legend>
+			Entrance examination for year 1
+			<input type="checkbox" name="P1" id="P1" value="1" <?php print $P1;?>><br>
+			Exemption from the entrance examination for year 1
+			<input type="checkbox" name="P1e" id="P1e" value="1" <?php print $P1e;?>><br>
+			Transfer to 2nd year
+			<input type="checkbox" name="P2" id="P2" value="1" <?php print $P2;?>><br>
+			Transfer to 3rd year
+			<input type="checkbox" name="P3" id="P3" value="1" <?php print $P3;?>><br>
+		</fieldset>
+						
+		<br>
+		
+		<fieldset>	   
+		   <legend>Foundation year (Preparatory course)</legend>
+			Foundation year
+			<input type="checkbox" name="F" id="F" value="1" <?php print $F;?>><br>
+			Vorbereitungsjahr
+			<input type="checkbox" name="V" id="V" value="1" <?php print $V;?>><br>
+		</fieldset>
+			
+			<br><br>
+			<input name="app_year" type="hidden" value="<?php print $app_year; ?>" />
+			<button type="submit"><?php print $formRegisterLng; ?></button>
+						
+		</form>
+	</fieldset>
+	
+<?
 }
 ?>
 

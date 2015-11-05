@@ -11,7 +11,7 @@ $username=$_SESSION['valid_user'];
 
 */
 
-include 'mimereader.class.php';
+//include 'mimereader.class.php';
 
 function getErrorString($error) {
 

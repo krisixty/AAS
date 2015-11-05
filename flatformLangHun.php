@@ -65,6 +65,10 @@
 	
 	$formYesLng = 'Igen';
 	$formNoLng = 'Nem';
+	
+	$formWelcomeLng = 'Below you can browse the apartments available for English and German Program Medical, Dental and Pharmacy students. Should you be interested in any of them please turn to our Flatrent Team who will help you in communicating with the landlord and writing the contract.';
+	$formWelcomeEmailLng = 'Phone: 003662342059';
+	$formWelcomeTelLng = 'e-mail: flatrent.fs@med.u-szeged.hu';
 
 	$formFooterLng="Mindkét fél tudomásul veszi, hogy a szerződés megkötését követően az SZTE-t semmilyen jellegű felelősség nem terheli a lakás bérbeadását illetően.";
 

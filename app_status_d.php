@@ -212,7 +212,7 @@ div_open();
 				
 				
 			<fieldset class="text2">
-					<legend class="text2">Botschaften</legend>
+					<legend class="text2">Nachrichten</legend>
 				<?	
 				//Ha talál üzenetet, akkor megvizsgálja, hogy arról ment-e értesítés e-mailben. Ha igen, akkor azt megjeleníti a jelentkező felületén.
 				$messages=$conn->query("SELECT * FROM messages WHERE jel_id='$jel_id'");

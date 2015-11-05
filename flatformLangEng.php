@@ -65,6 +65,10 @@
 	
 	$formYesLng = 'Yes';
 	$formNoLng = 'No';
+	
+	$formWelcomeLng = 'Below you can browse the apartments available for English and German Program Medical, Dental and Pharmacy students. <br> Should you be interested in any of them please turn to our Flatrent Team who will help you in communicating with the landlord and writing the contract.';
+	$formWelcomeEmailLng = 'Phone: 003662342059';
+	$formWelcomeTelLng = 'e-mail: flatrent.fs@med.u-szeged.hu';
 
 	$formFooterLng="Both parties notice that the University of Szeged does not bear any responsibility concerning the lending of the apartment, once the rental contract is signed. ";
 

@@ -1,5 +1,5 @@
 <?php
-require_once('aas_includes_UI_test.php');
+require_once('aas_includes.php');
 //require_once('aas_includes.php'); 
 session_start();
 do_html_header('');
@@ -8,19 +8,26 @@ display_officer_menu();
 $username=$_SESSION['valid_user'];
 
 include 'db_switcher.php';
-include 'mimereader.class.php';
+//include 'mimereader.class.php';
 
 $flat_id=$_POST['flat_id'];
 
-echo $flat_id;
+echo 'Adatbázis: '.$app_year;
 
 //query select all from flats + all rows to variables
 	include 'flatvars.php';
 	
+?>
+<fieldset>	
+	<legend><?php print $formParagraphLng;?></legend>	
+	<?
+		display_flatForm();
+		?><br><?
+		delFlat();
+	?>
+</fieldset>	
 
-	display_flatForm();
-
-?><p>Uploaded files:<br><?php
+<p>Uploaded files:<br><?php
 $picsPath="upload/";
 
 $flatpics=$conn->query("SELECT * FROM flatpics WHERE flat_id='$flat_id'");	

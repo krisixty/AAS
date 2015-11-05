@@ -27,9 +27,8 @@ Hereby, I apply to:<br><br>
 
 
 	
-		<?php //include 'list_of_app_progs.php'; //a választható angol programok listája?> 
-		<?php /*include 'list_of_app_progs_pharm_fy.php'; //a választható angol programok listája, ígycsak gyógyszerész és előkészítő*/?> 	   
-	   
+	<?php include 'list_of_app_progs2.php'; //a választható angol programok listája?> 
+   
 
 	<label for="fname">Family name:</label>
 	<input type="text" name="fname" id="fname" size="40" maxlength="50">
