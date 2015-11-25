@@ -35,9 +35,13 @@ div_open();
 
 
 			<p>
+				The information you provide on this form will be used for the purpose of recording, processing and acknowledging your document(s). It will be held in accordance with the provisions of the Data Protection Act no CXII of 2011 and it will not be passed on to any third parties without your permission.<br />
+				<br />
 				<b>Is my application package complete? - <?php print $ad_sor['comp'];?> </b><br />
 				<br />
 				<i>Submitted documents will be registered in the system after the applicant's application package has arrived to the Foreign Students' Secretariat.</i><br />
+				<br />
+				<b>Uploadable file format: maximum 5MB PDF!</b>
 				<br />
 				<i>See the checklist below:</i><br />
 			</p>
@@ -48,18 +52,25 @@ div_open();
 				<br />
 				Printed and signed Application Form: <?php print $ad_sor['app_form'];?> <br />
 				Application Fee: <?php print $ad_sor['app_fee'];?> <br />
-				Appl. Fee paid to Agent: <?php print $ed_sor['appfee'];?> <br />
+				<?/*Appl. Fee paid to Agent: <?php print $ed_sor['appfee'];?> <br />*/?>
 				Certified photocopy of School Leaving Certificate: <?php print $ad_sor['school_cert'];?> <br />
+				High school transcript: <?php print $ad_sor['hs_trscrpt'];?> <br />
+				<br />
+				Additional documents for transfer students:<br />
 				Transcript(s): <?php print $ed_sor['trscrpt'];?> <br />
 				Course Description(s): <?php print $ed_sor['crsdsc'];?> <br />
 				Diploma: <?php print $ed_sor['diploma'];?> <br />
+				<br />
 				Curriculum vitae: <?php print $ad_sor['cv'];?> <br />
 				3 recent photos (passport size): <?php print $ad_sor['photo'];?> <br />
 				Photocopy of your valid passport or ID: <?php print $ad_sor['passport'];?> <br />
-				TOEFL test results: <?php print $ad_sor['toefl'];?> <br />
+				English proficiency test results: <?php print $ad_sor['toefl'];?> <br />
 				Dyslexia declaration: <?php print $ad_sor['dyslexia'];?> <br />
+				<br />
+				In case of having the entrance examination in Szeged.<br>
 				Registration form for Szeged: <?php print $ed_sor['regform'];?> <br />
 				Entrance exam fee for Szeged (300 USD): <?php print $ed_sor['entfee'];?> <br />
+				<br />
 				Application package arrival date: <?php print $ad_sor['date'];?> <br />
 				<br />
 				<br />

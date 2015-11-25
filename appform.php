@@ -15,13 +15,15 @@ if ($result->num_rows>0) //vizsgálja, hogy adott-e már be jelentkezést
 	do_html_footer();
 	exit; 
 	} 
-
+	
+academicYearer();
 display_application_info();
+
 ?>
 
 <form action="apply.php" method="post" id="form1" target="_blank">
 
-<h3>Application Form for English Language Programs 2015/2016</h3>
+<h3>Application Form for English Language Programs <?echo $academicYear;?></h3>
 
 Hereby, I apply to:<br><br>
 

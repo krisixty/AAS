@@ -72,5 +72,8 @@ if ($sor['jon']=='N')
 	{
 	$jon='No';  
 	} 			
-
+if ($sor['jon']=='P') 
+	{
+	$jon='Postponement';  
+	} 
 ?>

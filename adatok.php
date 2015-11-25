@@ -6,10 +6,12 @@ $sor=mysqli_fetch_array($applicant);
 $jel_id=$sor['jel_id'];
 $programs= $conn->query("SELECT * FROM jel_es_prog WHERE jel_id='$jel_id'");
 
+academicYearer();
+
 div_open();
 ?>
 <fieldset class="text">
-	<legend class="text">University of Szeged Application Form 2015/2016</legend>
+	<legend class="text">University of Szeged Application Form <?echo $academicYear;?></legend>
 		<fieldset class="text2">
 			<legend class="text2">Applied program(s)</legend>
 				

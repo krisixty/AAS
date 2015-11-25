@@ -1,15 +1,4 @@
 <?php
-/*
-error_reporting(E_ALL);
-ini_set("display_errors", 1);
-require_once('aas_includes.php');
-session_start();
-do_html_header('');
-check_valid_user();
-display_officer_menu();
-$username=$_SESSION['valid_user'];
-
-*/
 
 //include 'mimereader.class.php';
 

@@ -37,6 +37,10 @@ div_open();
 			<fieldset class="text2">
 				<legend class="text2">Bisher eingereichte ärztliche Unterlagen</legend>
 
+				<br>
+				<b>Uploadable file format: maximum 5MB PDF!</b><br>
+				<br>
+				
 				Gesundheitsattest: <?php print $ad_sor['med_cert'];?> <br />
 				<?php 
 						$type_of_doc = 'med_cert'; 

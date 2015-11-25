@@ -2,7 +2,7 @@
 require_once('aas_includes.php');
 session_start();
 do_html_header('');
-check_valid_user();
+check_valid_officer_user();
 display_officer_menu();
 $username=$_SESSION['valid_user'];
 
@@ -56,6 +56,7 @@ $med_cert = $_POST['med_cert'];
 $hiv_test = $_POST['hiv_test'];
 $app_form = $_POST['app_form'];
 $school_cert = $_POST['school_cert'];
+$hs_trscrpt = $_POST['hs_trscrpt'];
 $cv = $_POST['cv'];
 $photo = $_POST['photo'];
 $app_fee = $_POST['app_fee'];
@@ -407,14 +408,14 @@ $check_jel_id=$conn->query("SELECT * FROM appdocs WHERE jel_id='$jel_id'");
 if ($check_jel_id->num_rows==0) 
 	{
 		$insert_appdocs=$conn->query
-	("INSERT INTO appdocs (jel_id, adate, xray, dyslexia, HB_test, HB_vacc, HC_test, med_cert, hiv_test, app_form, school_cert, cv, photo, app_fee, passport, toefl, comp, birthcert) VALUES ('$jel_id', '$adate', '$xray', '$dyslexia', '$HB_test', '$HB_vacc', '$HC_test', '$med_cert', '$hiv_test', '$app_form', '$school_cert', '$cv', '$photo', '$app_fee', '$passport', '$toefl', '$comp', '$birthcert')");
+	("INSERT INTO appdocs (jel_id, adate, xray, dyslexia, HB_test, HB_vacc, HC_test, med_cert, hiv_test, app_form, school_cert, hs_trscrpt, cv, photo, app_fee, passport, toefl, comp, birthcert) VALUES ('$jel_id', '$adate', '$xray', '$dyslexia', '$HB_test', '$HB_vacc', '$HC_test', '$med_cert', '$hiv_test', '$app_form', '$school_cert', '$hs_trscrpt', '$cv', '$photo', '$app_fee', '$passport', '$toefl', '$comp', '$birthcert')");
 	echo 'Jelentkezési dokumentumok rögzítve.';
 	?><br /><?php
 	}
 else
 	{
 	$update_appdocs=$conn->query
-	("UPDATE appdocs SET adate='$adate', xray='$xray', dyslexia='$dyslexia', HB_test='$HB_test', HB_vacc='$HB_vacc', HC_test='$HC_test', med_cert='$med_cert', hiv_test='$hiv_test', app_form='$app_form', school_cert='$school_cert', cv='$cv', photo='$photo', app_fee='$app_fee', passport='$passport', toefl='$toefl', comp='$comp', birthcert='$birthcert' WHERE jel_id='$jel_id'");
+	("UPDATE appdocs SET adate='$adate', xray='$xray', dyslexia='$dyslexia', HB_test='$HB_test', HB_vacc='$HB_vacc', HC_test='$HC_test', med_cert='$med_cert', hiv_test='$hiv_test', app_form='$app_form', school_cert='$school_cert', hs_trscrpt='$hs_trscrpt', cv='$cv', photo='$photo', app_fee='$app_fee', passport='$passport', toefl='$toefl', comp='$comp', birthcert='$birthcert' WHERE jel_id='$jel_id'");
 	echo 'Jelentkezési dokumentumok frissítve.';	
 	?><br /><?php
 	}

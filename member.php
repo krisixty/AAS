@@ -18,7 +18,7 @@ if (isset($_POST['username'])&&($_POST['passwd'])) //bejelentkezés próba
 		{
 		do_html_header('Problem:'); //sikertelen bejelentkezés
 		?><p class="text"><?php
-		echo 'You could not be logged in. You must be logged in to view this page.';
+		echo 'You could not be logged in. Make sure that your username and password are correct, and then try again.';
 		do_html_url('login.php', 'Login');
 		do_html_footer();
 		exit;
@@ -33,8 +33,8 @@ $applicant = $conn->query("SELECT jel_id FROM applicants WHERE username='$userna
 
 if ($applicant->num_rows==0) //vizsgálja, hogy adott-e már be jelentkezést
 	{
-	//display_program_switcher(); //ez mutatja meg a jelentkezési infot jelentkezési időszakban
-	display_application_over_info(); //ez mutatja meg, hogy a jelentkezési időszak véget ért
+	display_program_switcher(); //ez mutatja meg a jelentkezési infot jelentkezési időszakban
+	//display_application_over_info(); //ez mutatja meg, hogy a jelentkezési időszak véget ért
 	}
 else
 	{	

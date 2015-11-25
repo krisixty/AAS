@@ -2,7 +2,7 @@
 require_once('aas_includes.php');
 session_start();
 do_html_header('');
-check_valid_user();
+check_valid_officer_user();
 display_officer_menu();
 
 include 'db_switcher.php'; //Eldönti az $app_year alapján, hogy melyik adatbázishoz kapcsolódjon 

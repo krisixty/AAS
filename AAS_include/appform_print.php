@@ -21,17 +21,17 @@ the grading system.
 <table class="table_office">
 <tr><td><strong>For office use only!</strong></td></tr>
 <tr><td>[ ] Printed and signed Application Form</td>
-	<td>[ ] Application Fee</td> 
-    <td>[ ] Appl. Fee paid to Agent</td></tr>
+	<td>[ ] Application fee</td> 
+    <td>[ ] Appl. fee paid to agent</td></tr>
 <tr><td>[ ] Certified photocopy of School Leaving Certificate</td>
 	<td>[ ] Transcript(s)</td>
-    <td>[ ] Course Description(s)</td></tr>
+    <td>[ ] Course description(s)</td></tr>
 <tr><td>[ ] Diploma</td>
 	<td>[ ] Curriculum vitae</td>
     <td>[ ] 3 recent photos (passport size)</td></tr>
 <tr><td>[ ] Photocopy of your valid passport / ID</td>
-	<td>[ ] TOEFL test results</td>
-    <td>[ ] General Medical Certificate</td></tr>   
+	<td>[ ] English proficiency test results</td>
+    <td>[ ] General medical certificate</td></tr>   
 <tr><td>[ ] Dyslexia declaration</td>
 	<td>[ ] Registration form for Szeged</td>
     <td>[ ] Entrance exam fee for Szeged (300 USD)</td>
@@ -40,9 +40,9 @@ the grading system.
 	<td>[ ] Hepatitis C test</td></tr>
 <tr><td>[ ] HIV test</td> 
     <td>[ ] Chest X-Ray</td> 
-	<td>[ ] Certified copy of your Birth Certificate</td></tr>
-<tr><td>[ ] Vaccination Card/Immunization Records</td> 
-	<td>[ ] Varicella and Rubeola Declaration</td> 
+	<td>[ ] Certified copy of your birth certificate</td></tr>
+<tr><td>[ ] Vaccination card/immunization records</td> 
+	<td>[ ] Varicella and rubeola declaration</td> 
 	<td>[ ] Lab report</td></tr>
 </table>
 	

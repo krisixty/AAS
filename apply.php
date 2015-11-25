@@ -73,7 +73,7 @@ if($vorbjahr)
 
 //No-ra állítja a jelentkezési doksikat
 $insert_appdocs_No=$conn->query
-	("INSERT INTO appdocs (jel_id, xray, dyslexia, HB_test, HB_vacc, HC_test, med_cert, hiv_test, app_form, school_cert, cv, photo, app_fee, passport, toefl, comp, birthcert) VALUES ('$jel_id', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No')");	
+	("INSERT INTO appdocs (jel_id, xray, dyslexia, HB_test, HB_vacc, HC_test, med_cert, hiv_test, app_form, school_cert, hs_trscrpt, cv, photo, app_fee, passport, toefl, comp, birthcert) VALUES ('$jel_id', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No', 'No')");	
 	
 //No-ra állítja a beiratkozási doksikat
 $insert_regdocs_No=$conn->query

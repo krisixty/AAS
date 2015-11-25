@@ -6,10 +6,12 @@ $sor=mysqli_fetch_array($applicant);
 $jel_id=$sor['jel_id'];
 $programs= $conn->query("SELECT * FROM jel_es_prog WHERE jel_id='$jel_id'");
 
+academicYearer();
+
 div_open();
 ?>
 <fieldset class="text">
-	<legend class="text">Bewerbung für das Studienjahr 2015/2016</legend>
+	<legend class="text">Bewerbung für das Studienjahr <?echo $academicYear;?></legend>
 		<fieldset class="text2">
 			<legend class="text2">Bewerbung für das Programm/die Programme</legend>
 

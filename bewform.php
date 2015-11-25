@@ -14,6 +14,7 @@ do_html_header('');
 <?php   
 check_valid_user();
 
+
 $username=$_SESSION['valid_user'];
 $conn = db_connect();
 $result = $conn->query("SELECT * FROM applicants WHERE username='$username'");
@@ -25,13 +26,15 @@ if ($result->num_rows>0) //vizsgálja, hogy adott-e már be jelentkezést
 	do_html_footer();
 	exit; 
 	}
-	
+
+academicYearer();
 display_application_info_d();	
+
 ?>
 
 <form action="apply.php" method="post" id="form1" target="_blank">
 
-<h3>Bewerbungsformular für das Studium der Humanmedizin in deutscher Sprache 2015/2016</h3>
+<h3>Bewerbungsformular für das Studium der Humanmedizin in deutscher Sprache <?echo $academicYear;?></h3>
 
 Hiermit bewerbe ich mich für das Studium der<br><br>
 

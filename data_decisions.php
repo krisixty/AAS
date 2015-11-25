@@ -202,7 +202,7 @@ Dátum:
 
 </form>
 
-<p>Felvételi levelek:<br>
+<p>Felvételi levelek: (Max. 5MB, PDF)<br>
 <?
 	$type_of_doc = 'acceptance_letter';
 	docUploadFormOfficerUI(); ?>

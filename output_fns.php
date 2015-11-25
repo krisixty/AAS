@@ -227,7 +227,7 @@ function display_officer_menu()
 <a href="applicants_d.php">Jelentkezők - német</a> |
 <a href="queries.php">Lekérdezések</a> |
 <a href="flat_list.php">Albérletek (teszt)</a> |
-<a href="logout.php">Logout</a> 
+<a href="logout2.php">Logout</a> 
 </p>
 <?php
 }
@@ -239,9 +239,9 @@ function display_officer_site_info()
 <p class="text">
 Kedves Mindenki!<br>
 <br>
-A Excel táblák átkerültek a lekérdezésekhez! A teszt végűeket ne használjátok!<br>
-<br>
 A program során az alábbi dolgokra figyeljetek oda légyszíves:<br>
+<br>
+Törléskor felugró popup ablak esetén a "Prevent this page from creating additional dialogs." checkboxot ne pipáljátok be. Ha mégis megtörténik, akkor újra kell indítani a böngészőt, hogy újra figyelmeztessen törléskor.<br>
 <br>
 - Enter: a szövegmezőkbe ne rakjatok entert, mert a generált excel táblák szét fognak csúszni.<br>A letöltött táblában látszik, hogy melyik jelentkezőnél melyik mezőben van enter, tehát a javításhoz ki kell törölni az entert a megfelelő mezőből.<br>
 <br>
@@ -252,11 +252,6 @@ A program során az alábbi dolgokra figyeljetek oda légyszíves:<br>
 - Szövegmezők törlése: ha már egy szövegmezőbe volt korábban beírva valami, akkor úgy tudjátok "kitörölni" azt, hogy beraktok egy szóközt a mezőbe. (Ideiglenes megoldás.)<br>
 <br>
 - Átlag: az átlag mezőben a tizedesvesszőt ponttal kell írni, a vesszőt nem megfelelően dolgozza fel a rendszer.<br>
-<br>
-- A tesztfelhasználók ki lettek törölve. A tesztrendszer felállításáig ezzel a két felhasználóval tudtok tesztelni:<br>
-Németes: username: teszt1 password: teszt1 jel_id: 260 (Jelentkeztetve van német orvos 1 évre, statisztikák számainál vegyétek figyelembe!)<br>
-Angolos: username: teszt2 password: teszt2 jel_id: 258 (Jelentkeztetve van angol orvos 1 évre, statisztikák számainál vegyétek figyelembe!)<br>
-Új tesztfelhasználót légyszi ne hozzatok létre anélkül, hogy írásban jeleznétek nekem.<br>
 <br>
 <br>
 Jó munkát és sok türelmet meg kitartást a studentkákhoz!<br>

@@ -107,21 +107,37 @@ if ($result->num_rows>0)
 		throw new Exception('Could not log you in.');
 		}
 	}
+?>
+	
+<?php
+/*------------------------------------------------------------------------------------- DISPLAY LOGIN MESSSAGE---------------------------------------------*/
 
+	function display_login_message() {
+?>
+		<div class="grid-container">
+			<div class="grid-12">
+				<p class="login_message">Welcome <?php echo $_SESSION['valid_user'].','; ?> you are logged in to AAS. </p>
+			</div>
+		</div>
+<?php
+	}
+/*--END OF DISPLAY LOGIN MESSAGE--*/
+?>	
+
+
+<?php
 function check_valid_user()
 //ellenőrzi, h a user be van-e jelentkezve és értesíti
 {
   if (isset($_SESSION['valid_user']))
-  {?>
-  <p class="fent_login">Welcome <?php
-      echo $_SESSION['valid_user'].',';
-      echo ' ';?>you are logged in to AAS. </p><?php  
+  {
+	display_login_message();
   }
   else
   {
      // they are not logged in 
-     do_html_heading('Problem:');
-     echo 'You are not logged in.<br />';
+     //do_html_heading();
+     //echo 'You are not logged in.<br />';
      do_html_url('login.php', 'Login');
      do_html_footer();
      exit;
@@ -277,7 +293,6 @@ function send_mail_for_applicant($applicant_username, $notification_type)
       include('email_notifier.php');
     }
 }
-
 function isPaidandEngOrGer() {
 
 	global $payment;

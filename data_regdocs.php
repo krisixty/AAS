@@ -26,7 +26,7 @@ Tuition fee receipt: <select name="fee_dec">
 <option><?php print $sor['fee_dec'] ?></option>
 <option>No</option>
 <option>Yes</option>
-<option>NA</option>
+<option>Not accepted</option>
 </select><br>
 <?php include 'data_remarks_regdocs.php' ?>
 </fieldset>

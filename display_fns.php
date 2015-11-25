@@ -548,6 +548,7 @@ function display_registration_form_for_officers()
 /*<!--------------------------------------------------------------------------------------DISPLAY NEW APPLICATION INFO -----------------------------------------------------------------------------*/
 	function display_application_info() //a member php-ban kell kikommenttelni, ha vége a jelentkezési időszaknak + teljes jelentkezés leírása a serveren a php/sve könytárban
 	{
+		global $academicYear;
 ?>
 	<div class="grid-container">
 		<div class="grid-6">
@@ -560,8 +561,10 @@ function display_registration_form_for_officers()
 		</div>
 
 		<div class="grid-6">
-			<h3>The application deadline is June 30, 2015</h3>
+			<h3>Application <?echo $academicYear;?></h3>
 				<p>
+						The application deadline is June 30, 2015<br />
+						<br />
 						Late applicants can be considered on the basis of place availability.<br />
 						<br />
 						When you provide information during completion of this Application, you agree to: always provide responsive information that is true, accurate, current and complete; otherwise, you acknowledge that the University reserves the right to terminate your application.<br />
@@ -581,6 +584,8 @@ function display_registration_form_for_officers()
 /*<!--------------------------------------------------------------------------------------DISPLAY NEW APPLICATION INFO -----------------------------------------------------------------------------*/
 	function display_application_info_d() //a member php-ban kell kikommenttelni, ha vége a jelentkezési időszaknak + teljes jelentkezés leírása a serveren a php/sve könytárban
 	{
+		
+		global $academicYear;
 ?>
 	<div class="grid-container">
 		<div class="grid-6">
@@ -593,7 +598,7 @@ function display_registration_form_for_officers()
 		</div>
 
 		<div class="grid-6">
-			<h3>Bewerbung 2015</h3>
+			<h3>Bewerbung <?echo $academicYear;?></h3>
 				<p>
 						Bei dem Ausfüllen der Online-Bewerbug müssen die angegebenen Daten der Wahrheit entsprechen, die aktuell und vollständig sind, andererseits behält sich die Universität das Recht vor die Bewerbung bei falsch angegebenen Daten zu löschen.<br />
 						<br />
@@ -708,5 +713,15 @@ function backTo() {
 }
 ?>
 	
-
+<?
+function academicYearer() {
+	
+	global $currentYear;
+	global $nextYear; 
+	global $academicYear;
+	
+	$currentYear = date('Y');
+	$nextYear = $currentYear + 1;
+	$academicYear = $currentYear.'/'.$nextYear;
+}
 

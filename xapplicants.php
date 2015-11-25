@@ -36,8 +36,10 @@ program='F' ORDER BY fname");
 $filename ="Applicants_$app_year.xls";
 /*Jel. ID\t
 Username\t*/
-$head = "ID\tUsername\tGender\tFamily Name\tFirst & Middle Name\tCitizenship/Nationality\tCitizen2\tDate of Birth\tCity of Birth\tCountry of Birth\tID/Passport - type\tID/Passport number\tMother's family name (Maiden)\tMother's first name\tAddress: No., Street\tPostal Code\tCity (State, County)\tCountry\tE-mail\tTelephone\tDate of application (online)\tDate of application (hard copy)\tApplied to\tAppl. Fee (200 USD)\tAppl. Fee paid to Agent\tSzeged entrance exam\tEntrance exam fee (300 USD)\tTime of 1st entrance exam\tPlace of 1st entrance exam\tTime of 2nd entrance exam\tPlace of 2nd entrance exam\tDecision based on the following\tDecision\tDecision_prog\tLetter sent to the student via e-mail\tLetter sent to CI/Avi/S by post\tDate\tDeadline for accepting the place\tRemark - decision\tBank receipt\tPOE\tSA\tRemark - reg. docs\tAgent\tApplication form\tHSD\tCV\tPhoto\tPassport/ID card (copy)\tMed.Cert\tHepaB vacc. card\tHepaB test\tHepaC\tHIV\tChest X-ray result\tVacc or Imm\tVar-Rub\tDyslexia\tTOEFL\tTranscript\tSyllabus\tDiploma\tAll application documents submitted\tAccepted to SOTE\tAccepted to POTE\tAccepts the place\tFurther remarks\tSchool leaving cert.: Name of school\tDate of graduation (y/m/d)\tCertificate number\tCountry\tCity\t1_Bio_wr\t1_Chem_wr\t1_Eng_wr\t1_Phys_wr\t1_Bio_or1\t1_Bio_or2\t1_Chem_or1\t1_Chem_or2\t1_Eng_or\t1_Phys_or1\t1_Phys_or2\t1_Comment\t1_Examiner\t2_Bio_wr\t2_Chem_wr\t2_Eng_wr\t2_Phys_wr\t2_Bio_or1\t2_Bio_or2\t2_Chem_or1\t2_Chem_or2\t2_Eng_or\t2_Phys_or1\t2_Phys_or2\t2_Comment\t2_Examiner\n";
+$head = "ID\tUsername\tGender\tFamily Name\tFirst & Middle Name\tCitizenship/Nationality\tCitizen2\tDate of Birth\tCity of Birth\tCountry of Birth\tID/Passport - type\tID/Passport number\tMother's family name (Maiden)\tMother's first name\tAddress: No., Street\tPostal Code\tCity (State, County)\tCountry\tE-mail\tTelephone\tDate of application (online)\tDate of application (hard copy)\tApplied to\tAppl. Fee\tSzeged entrance exam\tEntrance exam fee (300 USD)\tTime of 1st entrance exam\tPlace of 1st entrance exam\tTime of 2nd entrance exam\tPlace of 2nd entrance exam\tDecision based on the following\tDecision\tDecision_prog\tLetter sent to the student via e-mail\tLetter sent to CI/Avi/S by post\tDate\tDeadline for accepting the place\tRemark - decision\tBank receipt\tPOE\tSA\tRemark - reg. docs\tAgent\tApplication form\tHSD\tHigh school transcript\tCV\tPhoto\tPassport/ID card (copy)\tMed.Cert\tHepaB vacc. card\tHepaB test\tHepaC\tHIV\tChest X-ray result\tVacc or Imm\tVar-Rub\tDyslexia\tTOEFL\tTranscript\tSyllabus\tDiploma\tAll application documents submitted\tAccepted to SOTE\tAccepted to POTE\tAccepts the place\tFurther remarks\tSchool leaving cert.: Name of school\tDate of graduation (y/m/d)\tCertificate number\tCountry\tCity\t1_Bio_wr\t1_Chem_wr\t1_Eng_wr\t1_Phys_wr\t1_Bio_or1\t1_Bio_or2\t1_Chem_or1\t1_Chem_or2\t1_Eng_or\t1_Phys_or1\t1_Phys_or2\t1_Comment\t1_Examiner\t2_Bio_wr\t2_Chem_wr\t2_Eng_wr\t2_Phys_wr\t2_Bio_or1\t2_Bio_or2\t2_Chem_or1\t2_Chem_or2\t2_Eng_or\t2_Phys_or1\t2_Phys_or2\t2_Comment\t2_Examiner\n";
 echo $head;
+
+//Appl. Fee paid to Agent\t
 
 
 header('Content-type: application/ms-excel');
@@ -89,7 +91,7 @@ $appdate=$sor['appdate'];
 include 'programs_excel.php';
 
 $app_fee=$sor['app_fee'];
-$appfee=$sor['appfee'];
+//$appfee=$sor['appfee'];
 $regform=$sor['regform'];
 $entfee=$sor['entfee'];
 
@@ -154,6 +156,7 @@ $rep_name=$sor['rep_name'];
 //appdocs
 $app_form=$sor['app_form'];
 //$school_cert=$sor['school_cert'];
+$hs_trscrpt = $sor['hs_trscrpt'];
 $cv=$sor['cv'];
 $photo=$sor['photo'];
 $passport=$sor['passport'];
@@ -167,15 +170,15 @@ $dyslexia=$sor['dyslexia'];
 $toefl=$sor['toefl'];
 
 //engdocs
-//$trscrpt=$sor['trscrpt'];
-//$crsdsc=$sor['crsdsc'];
-//$diploma=$sor['diploma'];
+$trscrpt=$sor['trscrpt'];
+$crsdsc=$sor['crsdsc'];
+$diploma=$sor['diploma'];
 
-include 'not_certified_excel.php';
+//include 'not_certified_excel.php';
 
 //appdocs - anyaga teljes?
 $comp=$sor['comp'];
-
+$comp='KOMP';
 
 //other 
 include 'other_excel_english.php';
@@ -200,8 +203,10 @@ $letterdate=$sor['letterdate'];
 /*$jel_id\t*/
 /*$username\t*/
 
-$contents = "$jel_id\t$username\t$gender\t$fname\t$gname\t$citizen\t$citizen2\t$dob\t$pob_city\t$pob_country\t$proof_type\t$proof_num\t$mfname\t$mgname\t$permadd\t$add_pc\t$add_city\t$add_country\t$email\t$phone\t$appdate\t$adate\t$program\t$app_fee\t$appfee\t$regform\t$entfee\t$e_date\t$e_place\t$e_date_2\t$e_place_2\t$basis\t$decision\t$prog\t$emaildate\t$tocas\t$letterdate\t$dfdate\t$remarks_dec\t$fee_dec\t$proof\t$study_a\t$remarks_rd\t$rep_name\t$app_form\t$school_cert\t$cv\t$photo\t$passport\t$med_cert\t$HB_vacc\t$HB_test\t$HC_test\t$hiv_test\t$xray\t$imm_vacc\t$var_rub\t$dyslexia\t$toefl\t$trscrpt\t$crsdsc\t$diploma\t$comp\t$sote\t$pote\t$jon\t$remarks_fur\t$hs_name\t$hs_date\t$hs_certnum\t$hs_country\t$hs_city\t$bio_wr\t$chem_wr\t$eng_wr\t$phys_wr\t$bio_or\t$bio_or2\t$chem_or\t$chem_or2\t$eng_or\t$phys_or\t$phys_or2\t$suggestion\t$examiner\t$bio_wr_2\t$chem_wr_2\t$eng_wr_2\t$phys_wr_2\t$bio_or_2\t$bio_or2_2\t$chem_or_2\t$chem_or2_2\t$eng_or_2\t$phys_or_2\t$phys_or2_2\t$suggestion_2\t$examiner_2\n";
+$contents = "$jel_id\t$username\t$gender\t$fname\t$gname\t$citizen\t$citizen2\t$dob\t$pob_city\t$pob_country\t$proof_type\t$proof_num\t$mfname\t$mgname\t$permadd\t$add_pc\t$add_city\t$add_country\t$email\t$phone\t$appdate\t$adate\t$program\t$app_fee\t$regform\t$entfee\t$e_date\t$e_place\t$e_date_2\t$e_place_2\t$basis\t$decision\t$prog\t$emaildate\t$tocas\t$letterdate\t$dfdate\t$remarks_dec\t$fee_dec\t$proof\t$study_a\t$remarks_rd\t$rep_name\t$app_form\t$school_cert\t$hs_trscrpt\t$cv\t$photo\t$passport\t$med_cert\t$HB_vacc\t$HB_test\t$HC_test\t$hiv_test\t$xray\t$imm_vacc\t$var_rub\t$dyslexia\t$toefl\t$trscrpt\t$crsdsc\t$diploma\t$comp\t$sote\t$pote\t$jon\t$remarks_fur\t$hs_name\t$hs_date\t$hs_certnum\t$hs_country\t$hs_city\t$bio_wr\t$chem_wr\t$eng_wr\t$phys_wr\t$bio_or\t$bio_or2\t$chem_or\t$chem_or2\t$eng_or\t$phys_or\t$phys_or2\t$suggestion\t$examiner\t$bio_wr_2\t$chem_wr_2\t$eng_wr_2\t$phys_wr_2\t$bio_or_2\t$bio_or2_2\t$chem_or_2\t$chem_or2_2\t$eng_or_2\t$phys_or_2\t$phys_or2_2\t$suggestion_2\t$examiner_2\n";
 
+
+//$appfee\t
 
 //$contents=mb_convert_encoding($contents, 'UTF-16LE', 'UTF-8');	
 //print chr(255) . chr(254) . mb_convert_encoding($contents, 'UTF-16LE', 'UTF-8');

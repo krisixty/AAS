@@ -23,7 +23,7 @@ display: none;
 
 p.logo
 {
- margin-top:30px;
+ margin-top:15px;
  color: #FFFFFF;
  font-size:2em;
 }
@@ -275,9 +275,9 @@ p.teamtreehouse
  padding:0px;
  border-collapse:collapse;
  position:absolute;
- top:180px;
+ top:182px;
  left:150px;
- font-size:0.80em;
+ font-size:0.75em;
 }
 
 .table_pagenum td
