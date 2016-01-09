@@ -2,7 +2,7 @@
 include 'engmail_data.php';
 //angol nyelvű visszajelzés a jelentkezésről: tárgy, szöveg
 $engsub = "Confirmation of your University of Szeged Application";
-$engmail = "Dear $gname $fname,\n\n
+$engmail = "Dear Applicant,\n\n
 
 Thank you for your interest in studying at the University of Szeged, Hungary.
 

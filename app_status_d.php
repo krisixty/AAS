@@ -49,6 +49,12 @@ div_open();
 				
 				
 				Dyslexie: <?php print $ad_sor['dyslexia'];?> <br />
+				<?php 
+						$type_of_doc = 'dyslexia'; 
+						docUploadForm(); ?>
+						<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+				
+				
 				<br />
 				<b>Weitere eingereichte Unterlagen:</b><br />
 				Ausgedrucktes und unterschriebenes
@@ -136,12 +142,14 @@ div_open();
 					docUploadForm(); ?>
 					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
 					
+				<? /* KIVETETTÉK 2016.01.05-KOR
 				Laborergebnisse: <?php print $rd_sor['labreport'];?><br /> 
 					<?php 
 					$type_of_doc = 'labreport'; 
 					docUploadForm(); ?>
 					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
-				
+					*/
+				?>
 				
 				<br />
 				Die zur Einschreibung benötigten Dokumente sind eingereicht worden: <?php print $rd_sor['rd_subm'];?><br />

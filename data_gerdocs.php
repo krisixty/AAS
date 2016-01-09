@@ -3,8 +3,6 @@ $gerdocs=$conn->query("SELECT * FROM gerdocs WHERE jel_id='$jel_id'");
 $sor=mysqli_fetch_array($gerdocs);
 ?>
 <fieldset><legend>Egyéb dokumentumok:</legend>
-<table>
-<tr><td>
 Rhein. Bildungszentrum Köln/Prometheus Med. Akademie Berlin: <select name="rh_pro">
 <option><?php print $sor['rh_pro'] ?></option>
 <option>No</option>
@@ -83,8 +81,7 @@ FSJ: <select name="fsj">
 <option>Yes</option>
 <option>NA</option>
 </select><br>
-</tr></td>
-</table>
+
 <?php include 'data_remarks_gerdocs.php' ?>
 </fieldset>
 

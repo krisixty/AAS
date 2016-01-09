@@ -1,6 +1,11 @@
 <?php
 require_once('aas_includes.php');
-$conn = db_connect();
+session_start();
+do_html_header('');
+check_valid_officer_user();
+display_officer_menu();
+$username=$_SESSION['valid_user'];
+//$conn = db_connect();
 
 //jel_id azonosító változó
 $jel_id=$_POST['jel_id']; 

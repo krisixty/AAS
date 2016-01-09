@@ -634,9 +634,17 @@ function dbSwitcherSelect() {
 		<td>
 		<form action="<?php echo $formAction ?>" method="post" id="form1">
 			<select name="app_year">
-				<option>2015</option>
-				<option>2014</option>   
-				<option>2013</option>
+
+					<?php
+					$y=date('Y');
+					for($i=$y; $i>2012; $i--) {
+					?>
+						<option value="<?php echo $i; ?>"><?php echo $i; ?></option>   
+					<?php
+					}
+					?> 
+				
+				
 				<option>maintest_15</option>		
 			</select>
 		<input type="submit" name="Submit" id="Submit" value="választ" />

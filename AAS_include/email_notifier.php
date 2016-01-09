@@ -8,7 +8,7 @@ $from    = "confirmation@aas-szegedmed.hu";
 if ($notification_type == 'decision') {
 	
 $subject = "AAS(Decision) - The decision on your application is available";  
-$body    = "Dear $applicant_username Applicant,\n\n
+$body    = "Dear Applicant,\n\n
 The decision on your application has been uploaded to your AAS online account. To view the result please log in to your account at http://aas-szegedmed.hu
 
 This email is automatically generated; please do not reply to it.
@@ -22,8 +22,8 @@ The Admissions Team";
 if ($notification_type == 'message') {
 	
 $subject = "AAS(Message) - You have received a message from the University of Szeged";  
-$body    = "Dear $applicant_username Applicant,\n\n
-We posted a message on to your personal AAS online account. Please make sure to view this message by logging in to your account at http://aas-szegedmed.hu
+$body    = "Dear Applicant,\n\n
+We posted a message on to your personal AAS online account. Please make sure to view this message by logging in to your account at http://aas-szegedmed.hu .
 
 This email is automatically generated; please do not reply to it.
 	 

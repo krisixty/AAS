@@ -2,9 +2,7 @@
 $appdocs=$conn->query("SELECT * FROM appdocs WHERE jel_id='$jel_id'");
 $sor=mysqli_fetch_array($appdocs); //APPDOCS QUERY
 ?>
-<fieldset><legend><strong>Jelentkezési dokumentumok:</strong></legend>
-<table>
-<tr><td>
+<fieldset><legend>Jelentkezési dokumentumok:</legend>
 
 Printed and signed Application Form: <select name="app_form"> <?php //appdocs ?>
 <option><?php print $sor['app_form'] ?></option>
@@ -155,9 +153,7 @@ Entrance exam fee for Szeged (300 USD): <select name="entfee"> <?php //engdocs ?
 <option>Not accepted</option>
 <option>Not applicable</option>
 </select><br>
-</td>
-</tr>
-</table><br>
+
 <br>
 
 <?php
@@ -171,8 +167,10 @@ include 'data_app_pack_date.php'; //appdocs
 
 <p>Feltöltött fájlok:<br>
 <?
-$type_of_doc = 'med_cert'; 
-include 'shwUDocs.php';
+	$type_of_doc = 'med_cert'; 
+	include 'shwUDocs.php';
+	$type_of_doc = 'dyslexia'; 
+	include 'shwUDocs.php';
 ?>
 </p>
 </fieldset>

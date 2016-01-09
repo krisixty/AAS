@@ -1,5 +1,10 @@
 <?php
 require_once('aas_includes.php');
+session_start();
+do_html_header('');
+check_valid_officer_user();
+display_officer_menu();
+$username=$_SESSION['valid_user'];
 
 //t azonosító változó
 $jel_id=$_POST['jel_id']; 

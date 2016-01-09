@@ -66,6 +66,10 @@ div_open();
 				Photocopy of your valid passport or ID: <?php print $ad_sor['passport'];?> <br />
 				English proficiency test results: <?php print $ad_sor['toefl'];?> <br />
 				Dyslexia declaration: <?php print $ad_sor['dyslexia'];?> <br />
+						<?php 
+						$type_of_doc = 'dyslexia'; 
+						docUploadForm(); ?>
+						<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
 				<br />
 				In case of having the entrance examination in Szeged.<br>
 				Registration form for Szeged: <?php print $ed_sor['regform'];?> <br />
@@ -141,12 +145,15 @@ div_open();
 					$type_of_doc = 'birthcert'; 
 					docUploadForm(); ?>
 					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
-					
+				
+				<? /* KIVETETTÉK 2016.01.05-KOR
 				Lab report: <?php print $ad_sor['labreport'];?> <br />
 					<?php 
 					$type_of_doc = 'labreport'; 
 					docUploadForm(); ?>
 					<p class="uploadedDocs"><? include 'shwUDocs.php';?></p>
+					*/
+				?>
 				
 		</fieldset>	
 		

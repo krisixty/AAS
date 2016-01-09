@@ -64,13 +64,14 @@ Certified copy of your Birth Certificate: <select name="birthcert"> <?php //appd
 <option>Not accepted</option>
 </select><br>
 
+<? /* KIVETETTÉK 2016.01.05-KOR
 Lab report: <select name="labreport"> <?php //regdocs ?>
 <option><?php print $rd_sor['labreport'] ?></option>
 <option>No</option>
 <option>Yes</option>
 <option>Not accepted</option>
 </select><br><br>
-
+*/?>
 
 Anyaga teljes? <select name="comp"> <?php //appdocs ?>
 <option><?php print $sor['comp'] ?></option>

@@ -113,8 +113,11 @@ include 'data_remarks_appdocs.php';
 ?>
 <p>Feltöltött fájlok:<br>
 <?
-$type_of_doc = 'med_cert'; 
-include 'shwUDocs.php';
+	$type_of_doc = 'med_cert'; 
+	include 'shwUDocs.php';
+
+	$type_of_doc = 'dyslexia'; 
+	include 'shwUDocs.php';
 ?>
 </p>
 </fieldset>

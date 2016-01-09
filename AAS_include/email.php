@@ -5,7 +5,7 @@ require_once 'Mail.php';
 $from    = "confirmation@aas-szegedmed.hu";  
 /*$to      = "sixty.kri@gmail.com";  */
 $subject = "New AAS password";  
-$body    = "Dear $username,\n\nThis is to inform you that your University of Szeged Application and Admission System password has been changed to $password ";  
+$body    = "Dear Applicant,\n\nThis is to inform you that your University of Szeged Application and Admission System password has been changed to $password ";  
   
 /* SMTP server name, port, user/passwd */  
 include 'email_smtp.php';  

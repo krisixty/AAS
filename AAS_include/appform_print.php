@@ -43,7 +43,7 @@ the grading system.
 	<td>[ ] Certified copy of your birth certificate</td></tr>
 <tr><td>[ ] Vaccination card/immunization records</td> 
 	<td>[ ] Varicella and rubeola declaration</td> 
-	<td>[ ] Lab report</td></tr>
+	<td><!--[ ] Lab report--></td></tr>
 </table>
 	
 <p class="text3">
@@ -55,7 +55,7 @@ the grading system.
 	
 </p>
 <p class="signature">  
-I certify that all information submitted in the admission process - including the application form, any supplements, and any other supporting materials - is factually true, and honestly presented, and that these documents will become the property of the institution to which I am applying and will not be returned to me. Applicants are expected to immediately notify the University of Szeged should there be any changes to the information provided in this application. I declare that I am fully aware of the contents of the respective English language Admission and Academic Bulletin of Szeged and fully accept the given conditions.<br />
+I certify that all information submitted and uploaded in the admission process - including the application form, any supplements, and any other supporting materials - is factually true, and honestly presented, and that these documents will become the property of the institution to which I am applying and will not be returned to me. Applicants are expected to immediately notify the University of Szeged should there be any changes to the information provided in this application. I declare that I am fully aware of the contents of the respective English language Admission and Academic Bulletin of Szeged and fully accept the given conditions.<br />
 <br />
 <b>Signature:_________________________________ Date:_________________________________</b><br />
 </p>
